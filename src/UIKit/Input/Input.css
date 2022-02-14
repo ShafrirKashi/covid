@@ -1,0 +1,21 @@
+.Input {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+  font-weight: bold;
+}
+input {
+  height: 2.5rem;
+  width: 19.6rem;
+  border: 1px solid rgb(144, 144, 173);
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: right;
+}
+label {
+  padding-right: 5px;
+}
