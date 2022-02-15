@@ -5,7 +5,12 @@ import Input from "../../UIKit/Input/Input";
 import Button from "../../UIKit/Button/Button";
 import health from "../../Assets/img/health.png";
 import oref from "../../Assets/img/oref.png";
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+
+  let navigate = useNavigate();
+
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -22,7 +27,7 @@ function Login() {
           <Checkbox text="הישאר מחובר" />
           <Button text="כניסה" />
           <p>
-            לא רשום עדיין? <a href="*">"הרשם עכשיו"</a>
+            לא רשום עדיין? <a  href="/registration">"הרשם עכשיו"</a>
           </p>
         </div>
       </div>

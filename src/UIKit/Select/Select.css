@@ -1,0 +1,17 @@
+.SelectWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    font-weight: bold;
+}
+Select{
+    width: 19.6rem;
+    height: 2.5rem;
+    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 10px;
+
+}

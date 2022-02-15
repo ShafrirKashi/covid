@@ -1,0 +1,48 @@
+select{
+    width: 19.6rem;
+    height: 2.5rem;
+    text-align: right;
+
+}
+.recaptcha{
+    position: relative;
+    top: 25px;
+}
+.loginWrapperReg {
+    height: 52rem;
+    width: 43rem;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(150, 167, 179);
+    box-shadow: 0px 4px 8px 1px #00000073;
+    flex-direction: column;
+    /* background-color: green; */
+    padding-top: 3rem;
+  }
+  .inputsWrapperReg{
+    width: 20rem;
+    height: 35rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+  .btnSignReg{
+      position: relative;
+      top: 30px;
+  }
+  .logoWrapperReg{
+      /* background-color: blue; */
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .pReg{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 3rem;
+  }
