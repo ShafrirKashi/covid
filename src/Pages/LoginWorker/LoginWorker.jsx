@@ -11,8 +11,8 @@ function LoginWorker() {
     <div className="loginWorker">
       <div className="loginWrapperWorker">
         <div className="logoWrapper">
-          <a href="https://www.gov.il/he/departments/ministry_of_health/govil-landing-page" target="_blank" rel="noreferrer"><img src={health} alt="" /></a>
-          <a href="https://www.oref.org.il/" target="_blank" rel="noreferrer"><img src={oref} alt="" /></a>
+          <a href="https://www.gov.il/he/departments/ministry_of_health/govil-landing-page" target="_blank" rel="noopener noreferrer"><img src={health} alt="" /></a>
+          <a href="https://www.oref.org.il/" target="_blank" rel="noopener noreferrer"><img src={oref} alt="" /></a>
         </div>
         <div className="inputsWrapperWorker">
           <Input variant="dark" label="מספר זהות בן 9 ספרות" type="text" />
