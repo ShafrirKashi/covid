@@ -7,7 +7,13 @@
     box-shadow: 0px 1px 5px 4px #000000a6;
     background: linear-gradient(270deg, rgba(22,71,112,1) 0%, rgba(37,113,179,1) 66%, rgba(49,132,203,1) 100%); }
     .Navlogo{
-        width: 19rem;
+        width: 20rem;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        right: 30px;
     }
     .btnPersonal{
         width: 8rem;
@@ -33,6 +39,31 @@
     .personal{
         display: flex;
         align-items: center;
-        width: 15rem;
+        width: 23rem;
         justify-content: space-around;
+    }
+    .personalRight{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 11rem;
+        color: white;
+    }
+    .navSelect{
+        width: 6rem;
+        height: 2.5rem;
+        background-color: transparent;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+
+    }
+    .navSelect:hover{
+        background-color: rgba(255, 255, 255, 0.116);
+    }
+    .TopLogos{
+        width: 30px;
+
     }

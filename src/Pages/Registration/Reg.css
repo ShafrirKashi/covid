@@ -1,48 +1,47 @@
-select{
-    width: 19.6rem;
-    height: 2.5rem;
-    text-align: right;
-
-}
-.recaptcha{
-    position: relative;
-    top: 25px;
+.recaptcha {
+  position: relative;
+  top: 25px;
 }
 .loginWrapperReg {
-    height: 52rem;
-    width: 43rem;
-    background-color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    border: 1px solid rgb(150, 167, 179);
-    box-shadow: 0px 4px 8px 1px #00000073;
-    flex-direction: column;
-    /* background-color: green; */
-    padding-top: 3rem;
-  }
-  .inputsWrapperReg{
-    width: 20rem;
-    height: 35rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    /* background-color: red; */
-  }
-  .btnSignReg{
-      position: relative;
-      top: 30px;
-  }
-  .logoWrapperReg{
-      /* background-color: blue; */
-      width: 80%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  }
-  .pReg{
-    font-weight: bold;
-    font-size: 18px;
-    margin: 3rem;
-  }
+  height: 45rem;
+  width: 43rem;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgb(150, 167, 179);
+  box-shadow: 0px 4px 8px 1px #00000073;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.inputsWrapperReg {
+  width: 20rem;
+  height: 35rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.btnSignReg {
+  position: relative;
+  top: 30px;
+}
+.logoWrapperReg {
+  width: 90%;
+  height: 4rem;
+ display: flex;
+ align-items: center;
+ justify-content: flex-end;
+  position: relative;
+  bottom: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 23, 58);
+  border-bottom: 3px solid rgb(0, 58, 145);
+}
+.pReg {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 3rem;
+}

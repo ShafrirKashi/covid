@@ -11,16 +11,20 @@
   align-items: center;
 }
 .logoWrapper {
-  width: 100%;
+  width: 90%;
   height: 4rem;
  display: flex;
  align-items: center;
- justify-content: space-around;
+ justify-content: flex-end;
   position: relative;
-  bottom: 100px;
+  bottom: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 23, 58);
+  border-bottom: 3px solid rgb(0, 58, 145);
 }
 .loginWrapper {
-  height: 50rem;
+  height: 35rem;
   width: 35rem;
   background-color: white;
   border-radius: 5px;
@@ -28,8 +32,9 @@
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(150, 167, 179);
-  box-shadow: 0px 2px 48px 15px #00000073;
+  box-shadow: 0px 4px 8px 1px #00000073;
   flex-direction: column;
+  padding-top: 3rem;
 }
 .inputsWrapper {
   width: 20rem;
@@ -38,6 +43,7 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  
 }
 .forgot {
   position: relative;

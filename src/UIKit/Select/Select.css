@@ -5,7 +5,7 @@
     flex-direction: column;
     font-weight: bold;
 }
-Select{
+.Select{
     width: 19.6rem;
     height: 2.5rem;
     text-align: right;

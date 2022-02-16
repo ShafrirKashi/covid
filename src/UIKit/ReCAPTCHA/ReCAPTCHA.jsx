@@ -13,7 +13,7 @@ function Recaptcha() {
     <div>
           <ReCAPTCHA
            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-           onChange={onChange}/>,
+           onChange={onChange}/>
     </div>
   )
 }
