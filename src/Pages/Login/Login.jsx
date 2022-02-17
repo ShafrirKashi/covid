@@ -13,8 +13,8 @@ function Login() {
         <div className="logoWrapper">
          <p>כניסה עם סיסמה</p>
         </div>
-        <div className="inputsWrapper">
-          <Input variant="white" label="מספר זהות בן 9 ספרות" type="text" />
+        <form className="inputsWrapper">
+          <Input variant="white" label="מספר זהות בן 9 ספרות" type="tel" maxlength="9" minlength="9" oninvalid="setCustomValidity('please enter something')"/>
           <Input variant="white" label="סיסמה" type="password" />
           <a className="forgot" href="/forgot">
             שכחתי סיסמה
@@ -24,7 +24,7 @@ function Login() {
           <p>
             לא רשום עדיין? <a  href="/registration">"הרשם עכשיו"</a>
           </p>
-        </div>
+        </form>
       </div>
     </div>
   );

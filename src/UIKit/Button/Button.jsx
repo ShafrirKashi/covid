@@ -4,8 +4,7 @@ import './Button.css'
 function Button({text}) {
   return (
     <div className="Button">
-        <button className="btn">{text}</button>
-       
+        <input type="submit" value={text} className="btn"></input>
     </div>
   )
 }

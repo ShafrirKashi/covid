@@ -8,11 +8,11 @@ import oref from "../../Assets/img/oref.png";
 function Login() {
   return (
     <div className="login">
-      <div className="loginWrapper">
-        <div className="logoWrapper">
+      <div className="loginWrapperForgot">
+        <div className="logoWrapperForgot">
         <p>שחזור סיסמה</p>
         </div>
-        <div className="inputsWrapper">
+        <div className="inputsWrapperForgot">
           <Input variant="white" label="מספר זהות" type="text" />
           <Input variant="white" label="טלפון נייד" type="password" />
           <Button text="שחזר סיסמה" />

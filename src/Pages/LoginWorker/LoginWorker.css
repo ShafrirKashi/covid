@@ -56,9 +56,10 @@
   a {
     text-decoration: none;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 718px) {
     .loginWrapperWorker {
-      height: 100vh;
+      height: 100%;
+      padding-top:0
     }
     .logoWrapperWorker{
         width: 80%;

@@ -1,17 +1,17 @@
 import React from 'react'
 import './Input.css'
 
-function Input({placeholder, type, label, variant}) {
+function Input({onInput, placeholder, type, label, variant, maxlength, minlength, min, max}) {
   if (variant === "white"){
   return (
     <div className="Input">
         <label className="labelDark">{label}</label>
-        <input placeholder={placeholder} type={type}></input>
+        <input onInput={onInput} placeholder={placeholder} type={type} maxlength={maxlength} minlength={minlength} max={max} min={min}></input>
     </div>
   )}else {return (
     <div className="Input">
     <label className="labelLight">{label}</label>
-    <input placeholder={placeholder} type={type}></input>
+    <input onInput={onInput} placeholder={placeholder} type={type} maxlength={maxlength} minlength={minlength} max={max} min={min}></input>
 </div>
   )}
 

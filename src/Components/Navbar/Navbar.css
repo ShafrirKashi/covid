@@ -67,3 +67,22 @@
         width: 30px;
 
     }
+    @media screen and (max-width: 718px) {
+        .btnPersonal{
+            display: none;
+        }
+        .personalRight{
+            display: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Navlogo{
+         right: 0px;
+        }
+        .personal{
+            display: none;
+        }
+    }

@@ -5,3 +5,8 @@
     box-shadow: 0px 1px 6px 4px #000000c2;
 
 }
+@media screen and (max-width: 718px) {
+.Footer{
+    display:none
+}
+}
