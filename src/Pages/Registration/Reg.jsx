@@ -1,23 +1,17 @@
 import React, { useState } from "react";
 import "./Reg.css";
-import Checkbox from "../../UIKit/Checkbox/Checkbox";
 import Input from "../../UIKit/Input/Input";
 import Button from "../../UIKit/Button/Button";
 import Select from "../../UIKit/Select/Select";
 import Datepicker from "../../UIKit/Datepicker/Datepicker";
 import ReCAPTCHA from "../../UIKit/ReCAPTCHA/ReCAPTCHA";
-import health from "../../Assets/img/health.png";
-import oref from "../../Assets/img/oref.png";
 
 function Registration() {
   const [id, setId] = useState("");
   const [bday, setBday] = useState("");
   const [phone, setPhone] = useState("");
 
-   let submitHandler = (e) => {
-    e.preventDefault();
-    console.log(id, bday, phone)
-   }
+  console.log(bday, id, phone);
 
   return (
     <div className="login">
@@ -25,7 +19,7 @@ function Registration() {
         <div className="logoWrapperReg">
           <p>הרשמה למערכת</p>
         </div>
-        <form className="inputsWrapperReg" onSubmit={submitHandler}>
+        <form className="inputsWrapperReg">
           <Input
             variant="white"
             label="מספר זהות"
@@ -33,8 +27,8 @@ function Registration() {
             maxlength="9"
             onInput={(e) => setId(e.target.value)}
           />
-           <Datepicker 
-            onInput={(e) => setBday(e.target.value)}
+          <Datepicker
+            setStartDate={(date) => setBday(date)}
           />
           <Input
             variant="white"

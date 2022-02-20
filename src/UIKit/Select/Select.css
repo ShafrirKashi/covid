@@ -15,3 +15,9 @@
     margin-top: 10px;
 
 }
+@media screen and (max-width: 718px) {
+
+.Select{
+    width: 16rem;
+}
+}
