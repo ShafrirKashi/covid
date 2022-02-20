@@ -29,9 +29,9 @@ function Login() {
           <Button text="כניסה" />
         
         </form>
-        <p className="sign-btn">
-          <Modal /> לא רשום עדיין?
-          </p>
+        <div className="sign-btn">
+          <Modal />
+          </div>
         
       </div>
     </div>

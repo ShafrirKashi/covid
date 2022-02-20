@@ -10,7 +10,7 @@ const  ModalPop = () => {
 
   return (
     <div>
-      <button className="modal__btn" onClick={onOpenModal}>הרשם עכשיו</button>
+      <button className="modal__btn" onClick={onOpenModal}>לא רשום עדין? הרשם עכשיו</button>
       <Modal open={open} onClose={onCloseModal} center>
         <Reg />
       </Modal>
