@@ -11,6 +11,7 @@ function Input({
   minLength,
   min,
   max,
+  name
 }) {
   if (variant === "white") {
     return (
@@ -24,6 +25,7 @@ function Input({
           minLength={minLength}
           max={max}
           min={min}
+          name={name}
         ></input>
       </div>
     );

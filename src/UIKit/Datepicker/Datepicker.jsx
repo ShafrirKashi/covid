@@ -26,6 +26,7 @@ const Datepicker = (props) => {
         maxDate={new Date()}
         minDate={new Date('January 1, 1910')}
         withPortal
+        name="birthdayDate"
         
       />
     </div>
