@@ -1,3 +1,29 @@
-.datepicker{
-    z-index: 3000;
+
+.datepicker.default .datepicker-navbar-btn{
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(65, 141, 255); ;
+    
+}
+.datepicker-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datepicker.default .datepicker-header{
+    display: none;
+}
+.datepicker.default .datepicker-wheel{
+border-top: 1px solid rgb(122, 175, 255);
+border-bottom: 1px solid rgb(122, 175, 255);
+}
+.select-time{
+    width: 16.6rem;
+    text-align: start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+    margin-top: 2rem;
+    margin-right: 8px;
 }

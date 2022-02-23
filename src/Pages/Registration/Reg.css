@@ -40,6 +40,12 @@
   color: rgb(0, 23, 58);
   border-bottom: 3px solid rgb(0, 58, 145);
 }
+.reg-date-text{
+  margin-bottom: -30px;
+  font-size: 16px;
+  margin-right: 7px;
+  color: rgba(0, 0, 0, 0.637);
+}
 .pReg {
   font-weight: bold;
   font-size: 18px;

@@ -1,47 +1,51 @@
-import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import DatePicker from '@mui/lab/DatePicker';
-import MobileDatePicker from '@mui/lab/MobileDatePicker';
-import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
-import Stack from '@mui/material/Stack';
+import React, { useState } from "react";
+import DatePicker from "react-mobile-datepicker";
+import "./Datepicker.css";
+import TextField from "@mui/material/TextField";
+import InputAdornment from "@mui/material/InputAdornment";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import Box from "@mui/material/Box";
 
-export default function ResponsiveDatePickers() {
-  const [value, setValue] = React.useState(new Date());
+class Datepicker extends React.Component {
+  state = {
+    time: new Date(1990, 0, 1),
+    isOpen: false,
+  };
 
-  return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <Stack spacing={3}>
-        <MobileDatePicker
-          label="For mobile"
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        />
-        <DesktopDatePicker
-          label="For desktop"
-          value={value}
-          minDate={new Date('2017-01-01')}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        />
+  
+  handleClick = (e) => {
+    e.preventDefault();
+    this.setState({ isOpen: true });
+  };
+
+  handleCancel = () => {
+    this.setState({ isOpen: false });
+  };
+
+  handleSelect = (time) => {
+    this.setState({ time, isOpen: false });
+  };
+
+  render() {
+    return (
+      <div onClick={this.handleClick} className="App">
+        <p className="select-time">
+          {this.convertDate(this.state.time, "DD/MM/YYYY")}
+        </p>
+
         <DatePicker
-          disableFuture
-          label="Responsive"
-          openTo="year"
-          views={['year', 'month', 'day']}
-          value={value}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
+          value={this.state.time}
+          isOpen={this.state.isOpen}
+          onSelect={this.handleSelect}
+          onCancel={this.handleCancel}
+          confirmText="אישור"
+          cancelText="ביטול"
+          min={new Date(1910, 0, 1)}
+          max={new Date()}
         />
-      </Stack>
-    </LocalizationProvider>
-  );
+      </div>
+    );
+  }
 }
+
+export default Datepicker;

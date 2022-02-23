@@ -1,23 +1,45 @@
-import React from "react";
-import "./Select.css";
+import React, {useState} from "react";
+import Box from "@mui/material/Box";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+import rtlPlugin from "stylis-plugin-rtl";
+import { prefixer } from "stylis";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/react";
 
-function Select({name}) {
+const cacheRtl = createCache({
+  key: "muirtl",
+  stylisPlugins: [prefixer, rtlPlugin],
+});
 
-<script src="https://www.google.com/recaptcha/api.js"></script>
+export default function BasicSelect({onChange}) {
+
+  const [HMO, setHMO] = React.useState("");
 
   return (
-    <div className="SelectWrapper">
-      <label>קופת חולים</label>
-      <select className="Select" required name={name}>
-        <option value="Null"> בחר/י את קופת החולים שלך </option>
-        <option value="clalit"> כללית </option>
-        <option value="leumit"> לאומית </option>
-        <option value="macabi"> מכבי </option>
-        <option value="united"> מאוחדת </option>
-        <option value="idf"> צה"ל </option>
-      </select>
-    </div>
+    <CacheProvider value={cacheRtl}>
+      <Box sx={{ minWidth: 274, paddingLeft: 1 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">קופת חולים</InputLabel>
+          <Select
+          
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={HMO}
+            label="קופת חולים"
+            onChange={onChange}
+            variant="outlined"
+          >
+            <MenuItem value={"leumit"}>לאומית</MenuItem>
+            <MenuItem value={"clalit"}>כללית</MenuItem>
+            <MenuItem value={"meuhedet"}>מאוחדת</MenuItem>
+            <MenuItem value={"maccabi"}>מכבי</MenuItem>
+            <MenuItem value={"idf"}>צה"ל</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+    </CacheProvider>
   );
 }
-
-export default Select;

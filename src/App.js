@@ -3,6 +3,7 @@ import Login from './Pages/Login/Login'
 import LoginWorker from './Pages/LoginWorker/LoginWorker'
 import Registration from './Pages/Registration/Reg'
 import ForgotPass from './Pages/ForgotPass/ForgotPass'
+import LoginAdmin from './Pages/LoginAdmin/LoginAdmin'
 import { Routes, Route } from "react-router-dom"
 import React from 'react'
 import Navbar from './Components/Navbar/Navbar'
@@ -16,6 +17,7 @@ function App() {
       {/* <Navbar /> */}
       <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/loginadmin" element={<LoginAdmin />} />
       <Route path="/login2work" element={<LoginWorker />} />
       <Route path="/registration" element={<Registration />} />
       <Route path="/registration" element={<Registration />} />
