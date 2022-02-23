@@ -2,8 +2,7 @@ import React from "react";
 import "./ForgotPass.css";
 import Input from "../../UIKit/Input/Input";
 import Button from "../../UIKit/Button/Button";
-import health from "../../Assets/img/health.png";
-import oref from "../../Assets/img/oref.png";
+
 
 function Login() {
   return (

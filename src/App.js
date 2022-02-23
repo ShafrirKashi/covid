@@ -8,10 +8,12 @@ import React from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
 
+
 function App() {
   return (
     <div>
-      <Navbar />
+      
+      {/* <Navbar /> */}
       <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/login2work" element={<LoginWorker />} />
@@ -19,7 +21,7 @@ function App() {
       <Route path="/registration" element={<Registration />} />
       <Route path="/Forgot" element={<ForgotPass />} />
      </Routes>
-     <Footer />
+     {/* <Footer /> */}
     </div>
   );
 }

@@ -34,7 +34,8 @@
   border: 1px solid rgb(150, 167, 179);
   box-shadow: 0px 4px 8px 1px #00000073;
   flex-direction: column;
-  padding-top: 3rem;
+  padding-top: 3rem; 
+  background-color: greenyellow;
 }
 .inputsWrapper {
   width: 20rem;

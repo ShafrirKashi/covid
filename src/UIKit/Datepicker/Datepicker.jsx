@@ -1,35 +1,47 @@
-import React, { useState } from "react";
-import DatePicker from "react-datepicker";
+import * as React from 'react';
+import TextField from '@mui/material/TextField';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import DatePicker from '@mui/lab/DatePicker';
+import MobileDatePicker from '@mui/lab/MobileDatePicker';
+import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
+import Stack from '@mui/material/Stack';
 
-import "react-datepicker/dist/react-datepicker.css";
-import { registerLocale, setDefaultLocale, startDate } from "react-datepicker";
-import he from "date-fns/locale/he";
-registerLocale("he", he);
-
-const Datepicker = (props) => {
-  const [startDate, setStartDate] = useState(new Date('January 1, 90'));
-
-  
+export default function ResponsiveDatePickers() {
+  const [value, setValue] = React.useState(new Date());
 
   return (
-    <div className="Input">
-      <label className="labelDark">תאריך לידה</label>
-      <DatePicker
-        locale="he"
-        selected={startDate}
-        onChange={(date) => {props.setStartDate(date);}}
-        dateFormat="dd/MM/yyyy"
-        peekNextMonth
-        showMonthDropdown
-        showYearDropdown
-        dropdownMode="select"
-        maxDate={new Date()}
-        minDate={new Date('January 1, 1910')}
-        withPortal
-        name="birthdayDate"
-        
-      />
-    </div>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <Stack spacing={3}>
+        <MobileDatePicker
+          label="For mobile"
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          renderInput={(params) => <TextField {...params} />}
+        />
+        <DesktopDatePicker
+          label="For desktop"
+          value={value}
+          minDate={new Date('2017-01-01')}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          renderInput={(params) => <TextField {...params} />}
+        />
+        <DatePicker
+          disableFuture
+          label="Responsive"
+          openTo="year"
+          views={['year', 'month', 'day']}
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue);
+          }}
+          renderInput={(params) => <TextField {...params} />}
+        />
+      </Stack>
+    </LocalizationProvider>
   );
-};
-export default Datepicker;
+}
