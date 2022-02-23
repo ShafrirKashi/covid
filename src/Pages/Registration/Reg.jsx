@@ -11,7 +11,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Reg.css";
 import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 import Datepicker from "../../UIKit/Datepicker/Datepicker";
-import Datepicker2 from "../../UIKit/Datepicker/Datepicker2";
 
 
 const theme = createTheme();
@@ -90,7 +89,7 @@ console.log(IDvalue, Phonevalue, HMOvalue, Datevalue)
                 />
                 {/* <p className="reg-date-text">תאריך לידה *</p>
                 <Datepicker /> */}
-                <Datepicker2 
+                <Datepicker 
                 getDate={date => setDatevalue(date)}
                 />
                 <Select 
