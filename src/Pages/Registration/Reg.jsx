@@ -87,10 +87,8 @@ console.log(IDvalue, Phonevalue, HMOvalue, Datevalue)
                   type="phone"
                   id="phone"
                 />
-                {/* <p className="reg-date-text">תאריך לידה *</p>
-                <Datepicker /> */}
                 <Datepicker 
-                getDate={date => setDatevalue(date)}
+                getDate={(date) => setDatevalue(date)}
                 />
                 <Select 
                 onChange={(e) => setHMOvalue(e.target.value)}

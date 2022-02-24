@@ -4,8 +4,8 @@ import "./Datepicker.css";
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
 import Box from "@mui/material/Box";
-import Calender from '../../Assets/img/calender.png'
-import './Datepicker.css';
+import Calender from "../../Assets/img/calender.png";
+import "./Datepicker.css";
 
 const convertDate = (date, formate) => {
   const year = date.getFullYear();
@@ -24,8 +24,7 @@ const convertDate = (date, formate) => {
     .replace(/s+/, second);
 };
 
-function Datepicker( props ) {
-
+function Datepicker(props) {
   const [time, setTime] = useState(new Date());
   const [isOpen, setIsOpen] = useState(false);
 
@@ -43,6 +42,11 @@ function Datepicker( props ) {
     setIsOpen(false);
   };
 
+  // const handleValue = (props, time) => {
+  //   convertDate(time, "DD/MM/YYYY");
+  //   props.getDate(convertDate(time))
+  // };
+
   return (
     <div className="App">
       <Box
@@ -57,16 +61,17 @@ function Datepicker( props ) {
           id="date"
           type="text"
           inputFormat="dd/MM/yyyy"
-
-
           value={convertDate(time, "DD/MM/YYYY")}
-          
-
           variant="outlined"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
-                <img className="calender-img" src={Calender} onClick={handleClick} alt="" />
+                <img
+                  className="calender-img"
+                  src={Calender}
+                  onClick={handleClick}
+                  alt=""
+                />
               </InputAdornment>
             ),
           }}

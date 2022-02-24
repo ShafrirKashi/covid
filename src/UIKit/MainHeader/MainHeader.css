@@ -1,0 +1,46 @@
+.MainHeader{
+    width: 100vw;
+    height: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    /* background-color: green; */
+}
+.LogoMainWrapper{
+    width: 8rem;
+    /* background-color: aquamarine; */
+
+}
+.LogoMainPage{
+    width: 100%;
+}
+.MainRightLogo{
+    /* background-color: blue; */
+    width: 30%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainLeftLogo{
+    /* background-color: yellow; */
+    width: 30%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BellIcon{
+width: 25px;
+height: 25px;
+margin: 5px;
+cursor: pointer;
+}
+.MagIcon{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    cursor: pointer;
+
+}
