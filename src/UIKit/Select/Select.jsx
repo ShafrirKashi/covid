@@ -30,7 +30,7 @@ export default function BasicSelect({onChange}) {
             value={HMO}
             label="קופת חולים"
             onChange={onChange}
-            variant="outlined"
+            variant="standard"
           >
             <MenuItem value={"leumit"}>לאומית</MenuItem>
             <MenuItem value={"clalit"}>כללית</MenuItem>

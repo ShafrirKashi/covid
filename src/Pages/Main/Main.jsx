@@ -5,10 +5,10 @@ import TestLine from "../../UIKit/TestLine/TestLine";
 import "./Main.css";
 
 const dataToShow = [
-  {name: "Dani", Test: "PCR", Date: "2/4/2022", Time: "13:37"},
-  {name: "Michael", Test: "PCR", Date: "3/7/2021", Time: "12:32"},
-  {name: "David", Test: "PCR", Date: "17/4/2023", Time: "08:22"},
-  {name: "Yossi", Test: "PCR", Date: "22/5/2022", Time: "09:44"},
+  {name: "רונן כץ", test: "PCR", date: "2/4/2022", status: "ממתין"},
+  {name: "מאיר שלו", test: "PCR", date: "3/7/2021", status: "ממתין"},
+  {name: "נפתלי בנט", test: "PCR", date: "17/4/2023", status: "ממתין"},
+  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", status: "ממתין"},
 ]
 
 function Main() {
@@ -19,7 +19,7 @@ function Main() {
       </div>
       <div className="testLine">
         <TestLine
-          data={dataToShow}
+          datas={dataToShow}
         />
       </div>
       <div className="Bottom">

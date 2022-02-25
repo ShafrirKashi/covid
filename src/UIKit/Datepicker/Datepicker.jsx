@@ -62,7 +62,7 @@ function Datepicker(props) {
           type="text"
           inputFormat="dd/MM/yyyy"
           value={convertDate(time, "DD/MM/YYYY")}
-          variant="outlined"
+          variant="standard"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">

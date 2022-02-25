@@ -51,7 +51,7 @@ export default function Direction({
               id={id}
               autoComplete={autoComplete}
               label={label}
-              variant="outlined"
+              variant="standard"
             />
           </Box>
         </div>

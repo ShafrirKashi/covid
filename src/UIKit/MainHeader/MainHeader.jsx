@@ -10,11 +10,11 @@ function MainHeader() {
         <div className="MainRightLogo">
           <img className="MagIcon" src={Mag} alt="" />
         </div>
-        <div className="LogoMainWrapper">
-          <img className="LogoMainPage" src={Biduk} alt="" />
-        </div>
         <div className="MainLeftLogo">
           <img className="BellIcon" src={Bell} alt="" />
+        </div>
+        <div className="LogoMainWrapper">
+          <img className="LogoMainPage" src={Biduk} alt="" />
         </div>
       </div>
     </div>
