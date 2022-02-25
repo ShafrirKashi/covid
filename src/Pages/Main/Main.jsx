@@ -2,6 +2,7 @@ import React from "react";
 import MainHeader from "../../UIKit/MainHeader/MainHeader";
 import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 import TestLine from "../../UIKit/TestLine/TestLine";
+import Modal from "../../UIKit/Modal/Modal";
 import "./Main.css";
 
 const dataToShow = [
@@ -30,6 +31,7 @@ function Main() {
       <div className="Bottom">
         <div className="FloatingButton">
           <FloatingButton />
+          <Modal />
         </div>
       </div>
     </div>

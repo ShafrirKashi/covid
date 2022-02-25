@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import './Modal.css'
-import Reg from '../../Pages/Registration/Reg';
+import Tabs from '../../UIKit/Tabs/Tabs';
 import { Modal } from 'react-responsive-modal';
 
-const  ModalPop = () => {
-  const [open, setOpen] = useState(false);
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
+function ModalPop (props) {
+  
+ 
+ 
+
 
   return (
     <div>
-      <button className="modal__btn" onClick={onOpenModal}>לא רשום עדין? הרשם עכשיו</button>
-      <Modal open={open} onClose={onCloseModal} center>
-        <Reg />
+      
+      {/* <button className="modal__btn" onClick={onOpenModal}>as2d</button> */}
+      <Modal open={props.states} onClose={()=> props.closeIt(false)} center>
+        <div className="QR">
+          <Tabs />
+        </div>
       </Modal>
     </div>
   );

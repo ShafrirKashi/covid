@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useState } from 'react';
 import "./TestLine.css";
 import TestIcon from "../../Assets/img/testicon.png";
+import Modal from "../../UIKit/Modal/Modal";
+
+
 
 function TestLine({ details }) {
+
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+
   if (details.length === 0) {
     return <div>לא נקבעו בדיקות</div>;
   } else {
     return (
       <div>
         {details.map((detail) => (
-          <div className="TestLine">
+          <div onClick={onOpenModal} onClose={onCloseModal} className="TestLine">
             <div>
               <img className="TestIcon" src={TestIcon} alt="" />
             </div>
@@ -20,6 +29,7 @@ function TestLine({ details }) {
             <div className="Status">{detail.status}</div>
           </div>
         ))}
+        <Modal states={open} closeIt={open => setOpen(false)}/>
       </div>
     );
   }

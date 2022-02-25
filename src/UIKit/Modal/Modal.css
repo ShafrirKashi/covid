@@ -59,12 +59,12 @@
   
   .react-responsive-modal-closeButton {
     position: absolute;
-    top: 14px;
-    right: 14px;
+    top: 11px;
+    right: 19.5rem;
     border: none;
     padding: 0;
     cursor: pointer;
-    background-color: transparent;
+    background-color: white;
     display: flex;
   }
   
@@ -106,5 +106,9 @@
       transform: scale(0.96);
       opacity: 0;
     }
+  }
+  .QR{
+    width: 22rem;
+    height: 25rem;
   }
   
