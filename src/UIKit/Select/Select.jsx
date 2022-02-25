@@ -20,7 +20,7 @@ export default function BasicSelect({onChange}) {
 
   return (
     <CacheProvider value={cacheRtl}>
-      <Box sx={{ minWidth: 274, paddingLeft: 1 }}>
+      <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
         <FormControl fullWidth>
           <InputLabel id="demo-simple-select-label">קופת חולים</InputLabel>
           <Select

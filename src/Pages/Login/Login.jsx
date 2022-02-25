@@ -78,9 +78,11 @@ function Login() {
                   autoComplete="current-password"
                 />
                 <Grid item xs>
-                  <Link href="#" variant="body2">
-                    שכחתי סיסמה
-                  </Link>
+                  <Box sx={{mr: 1}}>
+                    <Link href="/forgot" variant="body2">
+                      שכחתי סיסמה
+                    </Link>
+                  </Box>
                 </Grid>
                 <Box
                   sx={{
@@ -89,10 +91,11 @@ function Login() {
                     direction: "column",
                     width: "100%",
                     marginTop: 3,
+                    mr: -2,
                   }}
                 >
                   <FormControlLabel
-                    control={<Checkbox defaultChecked />}
+                    control={<Checkbox />}
                     label="הישאר מחובר"
                   />
                 </Box>
@@ -105,11 +108,10 @@ function Login() {
                   התחבר
                 </Button>
               </Box>
-              <Link padding="20px" href="#" variant="body2">
+              <Link padding="20px" href="/registration" variant="body2">
                 {"לא רשום עדין? הרשם עכשיו"}
               </Link>
             </Box>
-            {/* <Copyright sx={{ mt: 8, mb: 4 }} /> */}
           </Container>
         </ThemeProvider>
       </div>

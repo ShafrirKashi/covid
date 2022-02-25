@@ -52,7 +52,7 @@ function Datepicker(props) {
       <Box
         component="form"
         sx={{
-          "& > :not(style)": { m: 1, width: "30ch" },
+          "& > :not(style)": {mr:0.9 ,mt: 5,mb:2, width: "30ch" },
         }}
         noValidate
         autoComplete="off"
@@ -60,18 +60,14 @@ function Datepicker(props) {
         <TextField
           id="date"
           type="text"
+          onClick={handleClick}
           inputFormat="dd/MM/yyyy"
           value={convertDate(time, "DD/MM/YYYY")}
           variant="standard"
           InputProps={{
             startAdornment: (
-              <InputAdornment position="start">
-                <img
-                  className="calender-img"
-                  src={Calender}
-                  onClick={handleClick}
-                  alt=""
-                />
+              <InputAdornment position="end">
+                <img className="calender-img" src={Calender} alt="" />
               </InputAdornment>
             ),
           }}

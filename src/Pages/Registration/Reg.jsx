@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
 import Select from "../../UIKit/Select/Select";
-import Link from "@mui/material/Link";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
@@ -12,22 +11,19 @@ import "./Reg.css";
 import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 import Datepicker from "../../UIKit/Datepicker/Datepicker";
 
-
 const theme = createTheme();
 
 function Login({ handleClick }) {
+  const [IDvalue, setIDvalue] = useState("");
+  const [Phonevalue, setPhonevalue] = useState("");
+  const [HMOvalue, setHMOvalue] = useState("");
+  const [Datevalue, setDatevalue] = useState("");
 
-const [IDvalue, setIDvalue] = useState('')
-const [Phonevalue, setPhonevalue] = useState('')
-const [HMOvalue, setHMOvalue] = useState('')
-const [Datevalue, setDatevalue] = useState('')
-
-console.log(IDvalue, Phonevalue, HMOvalue, Datevalue)
+  console.log(IDvalue, Phonevalue, HMOvalue, Datevalue);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -59,7 +55,6 @@ console.log(IDvalue, Phonevalue, HMOvalue, Datevalue)
                 onSubmit={handleSubmit}
                 noValidate
                 sx={{
-                  mt: 4,
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "start",
@@ -87,17 +82,13 @@ console.log(IDvalue, Phonevalue, HMOvalue, Datevalue)
                   type="phone"
                   id="phone"
                 />
-                <Datepicker 
-                getDate={(date) => setDatevalue(date)}
-                />
-                <Select 
-                onChange={(e) => setHMOvalue(e.target.value)}
-                />
+                <Datepicker getDate={(date) => setDatevalue(date)} />
+                <Select onChange={(e) => setHMOvalue(e.target.value)} />
                 <Button
                   type="submit"
                   fullWidth
                   variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
+                  sx={{ mt: 6, mb: 2 }}
                 >
                   הרשם
                 </Button>
