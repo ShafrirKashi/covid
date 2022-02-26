@@ -9,7 +9,6 @@ export default function FloatingActionButtonSize() {
 
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
 
 
 

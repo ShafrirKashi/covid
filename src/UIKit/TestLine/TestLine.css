@@ -2,12 +2,20 @@
   width: 100vw;
   height: 6rem;
   display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.315);
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  font-family: "Rubik"
+  padding-right: 12px;
+  font-family: "Rubik";
 }
-.TestIcon{
+.TestIcon {
   width: 3rem;
   font-family: "Rubik";
+}
+.TestLineWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.185);
+  
+
 }

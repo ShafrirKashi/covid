@@ -1,38 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./TestLine.css";
-import TestIcon from "../../Assets/img/testicon.png";
+import Dots from "../../UIKit/Dots/Dots";
 import Modal from "../../UIKit/Modal/Modal";
 
 
 
-function TestLine({ details }) {
 
+function TestLine({ details }) {
   const [open, setOpen] = useState(false);
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
 
+  
   if (details.length === 0) {
     return <div>לא נקבעו בדיקות</div>;
   } else {
     return (
       <div>
         {details.map((detail) => (
-          <div onClick={onOpenModal} onClose={onCloseModal} className="TestLine">
-            <div>
-              <img className="TestIcon" src={TestIcon} alt="" />
+          <div className="TestLineWrapper">
+            <div
+              onClick={onOpenModal}
+              onClose={onCloseModal}
+              className="TestLine"
+            >
+              <div className="TestType">{detail.test}</div>
+              <div className="PatientName">{detail.name}</div>
+              <div className="">{detail.date}</div>
+              <div className="">{detail.time}</div>
+              <div className="Status">{detail.status}</div>
             </div>
-            <div className="TestType">{detail.test}</div>
-            <div className="PatientName">{detail.name}</div>
-            <div className="">{detail.date}</div>
-            <div className="">{detail.time}</div>
-            <div className="Status">{detail.status}</div>
-            <div className="3dots">
-              <img src="" alt="" />
-            </div>
+           <Dots />
           </div>
         ))}
-        <Modal variant="testline" open={open} closeIt={open => setOpen(false)}/>
+        <Modal
+          variant="testline"
+          open={open}
+          closeIt={(open) => setOpen(false)}
+        />
       </div>
     );
   }
