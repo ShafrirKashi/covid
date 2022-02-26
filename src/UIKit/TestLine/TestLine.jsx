@@ -27,9 +27,12 @@ function TestLine({ details }) {
             <div className="">{detail.date}</div>
             <div className="">{detail.time}</div>
             <div className="Status">{detail.status}</div>
+            <div className="3dots">
+              <img src="" alt="" />
+            </div>
           </div>
         ))}
-        <Modal states={open} closeIt={open => setOpen(false)}/>
+        <Modal variant="testline" open={open} closeIt={open => setOpen(false)}/>
       </div>
     );
   }

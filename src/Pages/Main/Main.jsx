@@ -10,11 +10,6 @@ const dataToShow = [
   {name: "מאיר שלו", test: "PCR", date: "3/7/2021", time: "11:20", status: "מעבדה"},
   {name: "נפתלי בנט", test: "PCR", date: "17/4/2023", time: "08:45", status: "ממתין"},
   {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
-  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
-  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
-  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
-  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
-  {name: "איציק מרציאנו", test: "PCR", date: "22/5/2022", time: "18:10", status: "ממתין"},
 ]
 
 function Main() {

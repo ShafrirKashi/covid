@@ -1,14 +1,24 @@
-import * as React from 'react';
+import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import Modal from "../../UIKit/Modal/Modal";
+
 
 export default function FloatingActionButtonSize() {
+
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
+
+
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
-      <Fab color="warning" aria-label="add">
+      <Fab onClick={onOpenModal} color="warning" aria-label="add">
         <AddIcon />
       </Fab>
+      <Modal variant="add" open={open} closeIt={open => setOpen(false)}/>
     </Box>
   );
 }

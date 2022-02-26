@@ -5,7 +5,9 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.315);
   justify-content: space-around;
   align-items: center;
+  font-family: "Rubik"
 }
 .TestIcon{
   width: 3rem;
+  font-family: "Rubik";
 }

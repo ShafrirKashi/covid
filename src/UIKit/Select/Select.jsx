@@ -14,17 +14,41 @@ const cacheRtl = createCache({
   stylisPlugins: [prefixer, rtlPlugin],
 });
 
-export default function BasicSelect({onChange}) {
+export default function BasicSelect({onChange, variant, label}) {
 
   const [HMO, setHMO] = React.useState("");
-
-  return (
-    <CacheProvider value={cacheRtl}>
+  
+  if (variant === HMO){
+    return (
+      <CacheProvider value={cacheRtl}>
+        <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
+          <FormControl fullWidth>
+            <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={HMO}
+              label="קופת חולים"
+              onChange={onChange}
+              variant="standard"
+            >
+              <MenuItem value={"leumit"}>לאומית</MenuItem>
+              <MenuItem value={"clalit"}>כללית</MenuItem>
+              <MenuItem value={"meuhedet"}>מאוחדת</MenuItem>
+              <MenuItem value={"maccabi"}>מכבי</MenuItem>
+              <MenuItem value={"idf"}>צה"ל</MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
+      </CacheProvider>
+    );
+  }else if(variant == "city"){
+    return (
+      <CacheProvider value={cacheRtl}>
       <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">קופת חולים</InputLabel>
+          <InputLabel id="demo-simple-select-label">{label}</InputLabel>
           <Select
-          
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={HMO}
@@ -41,5 +65,7 @@ export default function BasicSelect({onChange}) {
         </FormControl>
       </Box>
     </CacheProvider>
-  );
+    );
+  }else{return ""}
+ 
 }
