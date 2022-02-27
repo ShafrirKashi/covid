@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ThreeDots from "../../Assets/img/dots.png";
 import LongPress from "../../UIKit/LongPress/LongPress";
-import Modal from "../../UIKit/Modal/Modal";
+import PopModal from "../PopModal/PopModal";
 import "./Dots.css";
 
 function Dots() {
@@ -13,7 +13,7 @@ function Dots() {
       <div onClick={onOpenModal} className="dotsWrapper">
         <img className="dots" src={ThreeDots} alt="" />
       </div>
-      <Modal variant="delete" open={open} closeIt={(open) => setOpen(false)} />
+      <PopModal variant="delete" open={open} closeIt={(open) => setOpen(false)} />
     </div>
   );
 }

@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import './Modal.css'
-import Tabs from '../../UIKit/Tabs/Tabs';
-import OrderCheck from '../../UIKit/OrderCheck/OrderCheck';
-import RemoveTestLine from '../../UIKit/RemoveTestLine/RemoveTestLine';
+import React from 'react';
+import './PopModal.css'
+import Tabs from '../Tabs/Tabs';
+import OrderCheck from '../OrderCheck/OrderCheck';
+import RemoveTestLine from '../RemoveTestLine/RemoveTestLine';
 import { Modal } from 'react-responsive-modal';
 
-function ModalPop ({variant, open, ...props}) {
+function ModalPop ({variant, open, details,...props}) {
   
- 
  
 
  if(variant === "testline"){
@@ -16,7 +15,7 @@ function ModalPop ({variant, open, ...props}) {
       
       <Modal open={open} onClose={()=> props.closeIt(false)} center>
         <div className="QR">
-          <Tabs />
+          <Tabs details={details}/>
         </div>
       </Modal>
     </div>

@@ -100,6 +100,7 @@ function Login() {
                   />
                 </Box>
                 <Button
+                href="/main"
                   type="submit"
                   fullWidth
                   variant="contained"

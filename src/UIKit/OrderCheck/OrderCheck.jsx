@@ -12,7 +12,8 @@ import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 
 const theme = createTheme();
 
-function Login() {
+function Login({details}) {
+  console.log(details)
   const [city, setCity] = useState("Rishon");
   const [station, setStation] = useState("Sea-side");
   const [HMOvalue, setHMOvalue] = useState("");

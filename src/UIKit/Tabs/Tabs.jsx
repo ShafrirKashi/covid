@@ -4,8 +4,8 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import QR from '../../Assets/img/qr.png'
-import Barcode from '../../Assets/img/barcode.png'
+// import QR from '../../Assets/img/qr.png'
+// import Barcode from '../../Assets/img/barcode.png'
 import './Tabs.css'
 
 
@@ -42,7 +42,9 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs() {
+export default function BasicTabs({ details, ...props}) {
+console.log(details)
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,10 +60,10 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <img className="QR__Img" src={QR} alt="" />
+      {details[0].QR}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <img className="BarcodeImg" src={Barcode} alt="" />
+      {details[0].Barcode}
       </TabPanel>
     
     </Box>

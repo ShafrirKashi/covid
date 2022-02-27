@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
-import Modal from "../../UIKit/Modal/Modal";
+import PopModal from "../PopModal/PopModal";
 
 
 export default function FloatingActionButtonSize() {
@@ -17,7 +17,7 @@ export default function FloatingActionButtonSize() {
       <Fab onClick={onOpenModal} color="warning" aria-label="add">
         <AddIcon />
       </Fab>
-      <Modal variant="add" open={open} closeIt={open => setOpen(false)}/>
+      <PopModal variant="add" open={open} closeIt={open => setOpen(false)}/>
     </Box>
   );
 }

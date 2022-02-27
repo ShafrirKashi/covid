@@ -83,6 +83,8 @@ function Datepicker(props) {
         showFormat="'DD/MM/YYYY'"
         confirmText="אישור"
         cancelText="ביטול"
+        theme="android"
+        showHeader={false}
       />
     </div>
   );

@@ -3,7 +3,7 @@ import "./MainHeader.css";
 import Biduk from "../../Assets/img/bidukLogoBlack.png";
 import Bell from "../../Assets/img/bell.png";
 import Mag from "../../Assets/img/mag.png";
-function MainHeader() {
+function MainHeader({}) {
   return (
     <div>
       <div className="MainHeader">
