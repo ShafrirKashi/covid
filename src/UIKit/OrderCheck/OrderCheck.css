@@ -1,0 +1,32 @@
+.css-14yr603-MuiStepContent-root{
+    border-left: 0px !important;
+}
+.MMuiStepper-root.MuiStepper-vertical.MuiStepper-alternativeLabel.css-11r6j1z-MuiStepper-root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sele{
+    width: 20rem;
+    height: 5rem;
+}
+.VerticalLinearStepper{
+    display: flex !important;
+    justify-content: center  !important;;
+    align-items: center !important;;
+    padding-top: 5rem;
+    flex-direction: column;
+    /* background-color: green; */
+}
+.mashu{
+    display: flex !important;;
+    justify-content: center !important;;
+    align-items:center !important;
+    padding-bottom: 5rem;
+}
+.css-11r6j1z-MuiStepper-root{
+    align-items: center !important; 
+}
+.css-8t49rw-MuiStepConnector-line{
+    border-left: 0px !important;
+}

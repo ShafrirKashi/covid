@@ -1,95 +1,104 @@
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import Select from "../../UIKit/Select/Select";
-import ButtonConfirm from "../../UIKit/ButtonConfirm/ButtonConfirm";
+import * as React from "react";
 import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import StepContent from "@mui/material/StepContent";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Select from "../../UIKit/Select/Select"
+import Input from "../../UIKit/Input/Input"
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "./OrderCheck.css";
-import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
+import './OrderCheck.css'
 
-const theme = createTheme();
 
-function Login({details}) {
-  console.log(details)
-  const [city, setCity] = useState("Rishon");
-  const [station, setStation] = useState("Sea-side");
-  const [HMOvalue, setHMOvalue] = useState("");
-  const [Datevalue, setDatevalue] = useState("");
+const steps = [
+  {
+    label: "בחר עיר",
+    description:
+    <div className="Sele">
+    <Select variant="city" label="קופת חולים" />
+    </div>
+  },
+  {
+    label: "בחר תחנת בדיקה",
+    description:   <div className="Sele">
+    <Select variant="city" label="קופת חולים" />
+    </div>
+    
+  },
+  {
+    label: "בחר תאריך בדיקה",
+    description:   <div className="Sele">
+    <Select variant="city" label="קופת חולים" />
+    </div>
+  },
+  {
+    label: "בחר שעת בדיקה",
+    description:    <div className="Sele">
+    <Select variant="city" label="קופת חולים" />
+    </div>
+  },
+];
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(city, station);
+export default function VerticalLinearStepper() {
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
   };
 
   return (
-    <div className="login">
-      <div className="loginWrapper">
-        <ThemeProvider theme={theme}>
-          <Container component="main" maxWidth="xs">
-            <CssBaseline />
-            <Box
-              sx={{
-                marginTop: -12,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                width: "400",
-              }}
-            >
-              {/* <img className="Logo_Login" src={BidukLogo} alt="" /> */}
-              <Typography component="h1" variant="h5">
-                דף הזמנת בדיקה חדשה
-              </Typography>
-              <Box
-                component="form"
-                onSubmit={handleSubmit}
-                noValidate
-                sx={{
-                  mt: 2,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "start",
-                }}
-              >
-                <Select
-                  onChange={(e) => setCity(e.target.value)}
-                  label="עיר מגורים"
-                  variant="city"
-                />
-                <Select
-                  onChange={(e) => setStation(e.target.value)}
-                  label="תחנת בדיקה"
-                  variant="city"
-                />
-                <Select
-                  onChange={(e) => setStation(e.target.value)}
-                  label="תאריך"
-                  variant="city"
-                />
-                <Select
-                  onChange={(e) => setStation(e.target.value)}
-                  label="שעה"
-                  variant="city"
-                />
-
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 6, mb: 2 }}
-                >
-                  הזמן בדיקה
-                </Button>
-              </Box>
-            </Box>
-          </Container>
-        </ThemeProvider>
-      </div>
+    <div className="VerticalLinearStepper" >
+      <Stepper alternativeLabel activeStep={activeStep} orientation="vertical">
+        {steps.map((step, index) => (
+          <Step key={step.label}>
+            <StepLabel>
+              {step.label}
+            </StepLabel>
+            <StepContent>
+              <Typography>{step.description}</Typography>
+              <div className="mashu" >
+                <div>
+                  <Button
+                    variant="contained"
+                    onClick={handleNext}
+                    sx={{ mt: 1, mr: 1 }}
+                  >
+                    {index === steps.length - 1 ? "המשך" : "המשך"}
+                  </Button>
+                  <Button
+                    disabled={index === 0}
+                    onClick={handleBack}
+                    sx={{ mt: 1, mr: 1 }}
+                  >
+                    חזור
+                  </Button>
+                </div>
+              </div>
+            </StepContent>
+          </Step>
+        ))}
+      </Stepper>
+      {activeStep === steps.length && (
+        <Paper square elevation={0} sx={{ p: 3 }}>
+          <Typography>כל השלבים הושלמו בהצלחה!</Typography>
+          <Button type="submit"  href="/main"  sx={{ mt: 1, mr: 0 }}>
+            הזמן בדיקה
+          </Button>
+          <Button type="submit" onClick={handleReset} sx={{ mt: 1, mr: 3.5 }}>
+             מלא מחדש
+          </Button>
+        </Paper>
+      )}
     </div>
   );
 }
-
-export default Login;

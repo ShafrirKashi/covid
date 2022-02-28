@@ -25,7 +25,7 @@ function ModalPop ({variant, open, details,...props}) {
     <div>
     <Modal open={open} onClose={()=> props.closeIt(false)} center>
       <div className="Add">
-    <OrderCheck />
+    <OrderCheck  />
       </div>
     </Modal>
   </div>
