@@ -1,37 +1,44 @@
-.Main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    /* background-color: blue; */
+.Main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(220, 232, 238);
+  overflow: hidden;
 }
-.MainHeader{
 
+.Bottom {
+  width: 100%;
+  background-color: rgb(206, 216, 221);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
 }
-.Bottom{
-    width: 100%;
-    /* background-color: yellow; */
-    height: 6rem;
-    display: flex;
-    align-items: center;
+.testLine {
+  width: 100vw;
+  height: 35.5rem;
 }
-.testLine{
-    /* background-color: teal; */
-    width: 100vw;
-    height: 100%;
+.FloatingButton {
+  position: relative;
+  bottom: 1rem;
 }
-.FloatingButton{
-    position: relative;
-    right: 10px;
-    bottom: 30px;
-    position: fixed;
+.QR__Img {
+  width: 100%;
+  height: 100%;
 }
-.QR__Img{
-    width: 100%;
-    height: 100%;
-    }
-    .BarcodeImg{
-        width: 100%;
-        height: 100%;
-    }
+.BarcodeImg {
+  width: 100%;
+  height: 100%;
+}
+.testLogo {
+  width: 3rem;
+}
+.Main::-webkit-scrollbar {
+  display: none;
+}

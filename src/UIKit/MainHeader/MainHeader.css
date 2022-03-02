@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 6rem;
+    height: 6.2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -12,6 +12,8 @@
     position: sticky;
     left: 0px;
     top: 0px;
+    overflow: hidden;
+
 }
 .LogoMainWrapper{
     width: 16rem;
@@ -19,6 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
 
 }
 .LogoMainPage{
@@ -53,6 +57,8 @@ cursor: pointer;
     cursor: pointer;
 
 }
+
+  
 
 
 

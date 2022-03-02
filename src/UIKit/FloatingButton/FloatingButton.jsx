@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import PopModal from "../PopModal/PopModal";
-
+import './FloatingButton.css'
 
 export default function FloatingActionButtonSize() {
 
@@ -14,7 +14,7 @@ export default function FloatingActionButtonSize() {
 
   return (
     <Box sx={{ '& > :not(style)': { m: 1 } }}>
-      <Fab onClick={onOpenModal} color="warning" aria-label="add">
+      <Fab onClick={onOpenModal} color="primary" aria-label="add">
         <AddIcon />
       </Fab>
       <PopModal variant="add" open={open} closeIt={open => setOpen(false)}/>

@@ -25,11 +25,12 @@ export default function Direction({
   type,
   id,
   autoComplete,
-  onChange
+  onChange,
+  error
 }) {
 
   const [value, setValue] = useState('')
-   console.log(value)
+
   return (
     <CacheProvider value={cacheRtl}>
       <ThemeProvider theme={theme}>
@@ -52,6 +53,7 @@ export default function Direction({
               autoComplete={autoComplete}
               label={label}
               variant="standard"
+              error={error}
             />
           </Box>
         </div>

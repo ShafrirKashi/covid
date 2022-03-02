@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
@@ -17,15 +17,38 @@ import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 const theme = createTheme();
 
 function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
+
+const [id, setID] = useState("")
+const [phone, setPhone] = useState("")
+const [idError, setIdError] = useState(false)
+const [phoneError, setPhoneError] = useState(false)
+
+
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   // eslint-disable-next-line no-console
+  //   console.log({
+  //     email: data.get("email"),
+  //     password: data.get("password"),
+  //   });
+  // };
+  
+  if(id ===""){
+    setIdError(true)
+  }
+  if(phone ===""){
+    setPhoneError(true)
+  }
+
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+
+    if(id && phone){
+      console.log(id, phone)
+    }
+  }
 
   return (
     <div className="login">
@@ -46,6 +69,7 @@ function Login() {
               <Typography component="h1" variant="h5">
                 כניסה
               </Typography>
+            
               <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -57,7 +81,9 @@ function Login() {
                   alignItems: "start",
                 }}
               >
+                  <form noValidate autoComplete="off" onSubmit={handleSubmit}>
                 <Input
+                  onChange={(e) => setID(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -66,8 +92,10 @@ function Login() {
                   name="ID"
                   autoComplete="ID"
                   autoFocus
+                  error={idError}
                 />
                 <Input
+                onChange={(e) => setPhone(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -76,7 +104,10 @@ function Login() {
                   type="password"
                   id="password"
                   autoComplete="current-password"
+                  error={phoneError}
+
                 />
+                
                 <Grid item xs>
                   <Box sx={{mr: 1}}>
                     <Link href="/forgot" variant="body2">
@@ -100,7 +131,7 @@ function Login() {
                   />
                 </Box>
                 <Button
-                href="/main"
+                  // href="/main"
                   type="submit"
                   fullWidth
                   variant="contained"
@@ -108,6 +139,7 @@ function Login() {
                 >
                   התחבר
                 </Button>
+                </form>
               </Box>
               <Link padding="20px" href="/registration" variant="body2">
                 {"לא רשום עדין? הרשם עכשיו"}

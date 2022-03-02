@@ -43,7 +43,6 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs({ details, ...props}) {
-console.log(details)
 
   const [value, setValue] = React.useState(0);
 
