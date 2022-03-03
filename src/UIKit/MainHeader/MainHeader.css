@@ -1,5 +1,5 @@
 .MainHeader{
-    background-image: url("../../Assets/img/background.jpg");
+    /* background-image: url("../../Assets/img/background.jpg"); */
     background-position: 0px 0px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,16 +8,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgb(114, 114, 114);
+    /* border-bottom: 1px solid rgb(114, 114, 114); */
     position: sticky;
     left: 0px;
     top: 0px;
-    overflow: hidden;
-
 }
-.LogoMainWrapper{
-    width: 16rem;
-    /* background-color: aquamarine; */
+.SearchMainWrapper{
+    width: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;

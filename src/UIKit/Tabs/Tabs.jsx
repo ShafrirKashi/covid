@@ -50,6 +50,8 @@ export default function BasicTabs({ details, ...props}) {
     setValue(newValue);
   };
 
+  console.log(details)
+
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -58,12 +60,19 @@ export default function BasicTabs({ details, ...props}) {
           <Tab label="ברקוד" {...a11yProps(1)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-      {details[0].QR}
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-      {details[0].Barcode}
-      </TabPanel>
+          <TabPanel value={value} index={0}>
+
+
+
+          
+          </TabPanel>
+        
+
+    
+          <TabPanel value={value} index={1}>
+          {details[0].Barcode}
+          </TabPanel>
+        
     
     </Box>
   );

@@ -8,8 +8,7 @@ function MainHeader({onChange}) {
   return (
     <div>
       <div className="MainHeader">
-        <div className="LogoMainWrapper">
-          {/* <img className="LogoMainPage" src={Biduk} alt="" /> */}
+        <div className="SearchMainWrapper">
           <Search onChange={(value) => onChange(value)}/>
         </div>
       </div>

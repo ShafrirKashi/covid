@@ -3,8 +3,9 @@ import MainHeader from "../../UIKit/MainHeader/MainHeader";
 import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 import TestLine from "../../UIKit/TestLine/TestLine";
 import PopModal from "../../UIKit/PopModal/PopModal";
+import Tabs from "../../UIKit/Tabs/Tabs";
 import QRcode from "../../Assets/img/qr.png";
-import Barcode from "../../Assets/img/barcode.png";
+import barcode from "../../Assets/img/barcode.png";
 import PCR from "../../Assets/img/pcrLogo.png";
 import Antigen from "../../Assets/img/antigenLogo.png";
 import Mosdi from "../../Assets/img/mosdiLogo.png";
@@ -21,9 +22,9 @@ const dataToShow = [
     date: "2/4/2022",
     time: "12:40",
     status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 324153,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={"https://barcode.tec-it.com/barcode.ashx?data=" + 324153 + "&code=Code11&dmsize=Default&eclevel=L"} alt="" />,
   },
   {
     name: "מאיר שלו",
@@ -31,9 +32,9 @@ const dataToShow = [
     date: "3/7/2021",
     time: "11:20",
     status: "מעבדה",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 214252,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "רונית מימון",
@@ -41,9 +42,9 @@ const dataToShow = [
     date: "17/4/2023",
     time: "08:45",
     status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 903456,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "טל כהן",
@@ -51,19 +52,19 @@ const dataToShow = [
     date: "22/5/2022",
     time: "18:10",
     status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 185256,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "איציק מרציאנו",
     test: <img className="testLogo" src={Mosdi} alt="" />,
     date: "12/8/2022",
     time: "12:30",
-    status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    status: "תחנת בדיקה",
+    number: 853941,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "שני טלקר",
@@ -71,19 +72,19 @@ const dataToShow = [
     date: "21/7/2022",
     time: "13:20",
     status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 678534,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "מאיר דהן",
     test: <img className="testLogo" src={PCR} alt="" />,
     date: "12/5/2022",
     time: "17:11",
-    status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    status: "תחנת בדיקה",
+    number:853632,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "שי ביטן",
@@ -91,19 +92,19 @@ const dataToShow = [
     date: "17/2/2022",
     time: "15:50",
     status: "ממתין",
-    number: (Math.floor(100000 + Math.random() * 900000)),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    number: 558681,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "מעיין רביץ",
     test: <img className="testLogo" src={Antigen} alt="" />,
     date: "18/4/2022",
     time: "20:40",
-    status: "ממתין",
-    number: Math.floor(100000 + Math.random() * 900000),
-    QR: <img className="QR__Img" src={QRcode} alt="" />,
-    Barcode: <img className="QR__Img" src={Barcode} alt="" />,
+    status: "מעבדה",
+    number: 315475,
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+    barcode: <img src="https://barcode.tec-it.com/barcode.ashx?data=01234567&code=Code11&dmsize=Default&eclevel=L" alt="" />
   },
 ];
 
