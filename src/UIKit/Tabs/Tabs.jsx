@@ -70,7 +70,6 @@ export default function BasicTabs({ details, ...props}) {
 
     
           <TabPanel value={value} index={1}>
-          {details[0].Barcode}
           </TabPanel>
         
     

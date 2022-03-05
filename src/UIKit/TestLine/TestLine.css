@@ -30,7 +30,7 @@ align-items: center;
 }
 .TestData{
   height: 4.5rem;
-  width: 10rem;
+  width: 7rem;
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
@@ -42,4 +42,7 @@ align-items: center;
 }
 .TestLineGod::-webkit-scrollbar {
   display: none;
+}
+.TestStatus{
+  width: 8rem;
 }

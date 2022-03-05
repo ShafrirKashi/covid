@@ -18,7 +18,9 @@ const theme = createTheme({
   });
 
   
-export default function BasicTextFields({onChange}) {
+export default function BasicTextFields({onChange, focus}) {
+
+
 
     const handleEnter = (e) => {
         e.preventDefault();
@@ -32,7 +34,7 @@ export default function BasicTextFields({onChange}) {
               <Box
                 component="form"
                 sx={{
-                  "& > :not(style)": { ml:1,mt: 1, width: "27ch" },
+                  "& > :not(style)": { ml:1,mt: 1, width: 1 },
                 }}
                 noValidate
                 autoComplete="off"
@@ -44,6 +46,7 @@ export default function BasicTextFields({onChange}) {
            variant="outlined" 
            onChange={handleEnter}
            type= "string"
+           autoFocus={true}
            />
            </form>
               </Box>

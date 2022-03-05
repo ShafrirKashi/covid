@@ -3,18 +3,16 @@
     background-position: 0px 0px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 6.2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* border-bottom: 1px solid rgb(114, 114, 114); */
+    width: 26rem !important;
+    height: 6.7rem !important;
     position: sticky;
-    left: 0px;
-    top: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
 }
 .SearchMainWrapper{
-    width: 20rem;
+    width: 25rem !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +51,9 @@ cursor: pointer;
     margin: 5px;
     cursor: pointer;
 
+}
+.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+            width: 22.3rem !important;
 }
 
   

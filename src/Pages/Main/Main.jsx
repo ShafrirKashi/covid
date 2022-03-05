@@ -24,7 +24,6 @@ const dataToShow = [
     status: "ממתין",
     number: 324153,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={"https://barcode.tec-it.com/barcode.ashx?data=" + 324153 + "&code=Code11&dmsize=Default&eclevel=L"} alt="" />,
   },
   {
     name: "מאיר שלו",
@@ -34,7 +33,6 @@ const dataToShow = [
     status: "מעבדה",
     number: 214252,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "רונית מימון",
@@ -44,7 +42,6 @@ const dataToShow = [
     status: "ממתין",
     number: 903456,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "טל כהן",
@@ -54,7 +51,6 @@ const dataToShow = [
     status: "ממתין",
     number: 185256,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "איציק מרציאנו",
@@ -64,7 +60,6 @@ const dataToShow = [
     status: "תחנת בדיקה",
     number: 853941,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "שני טלקר",
@@ -74,7 +69,6 @@ const dataToShow = [
     status: "ממתין",
     number: 678534,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "מאיר דהן",
@@ -84,7 +78,7 @@ const dataToShow = [
     status: "תחנת בדיקה",
     number:853632,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
+   
   },
   {
     name: "שי ביטן",
@@ -94,7 +88,6 @@ const dataToShow = [
     status: "ממתין",
     number: 558681,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img className="QR__Img" src={barcode} alt="" />,
   },
   {
     name: "מעיין רביץ",
@@ -104,18 +97,20 @@ const dataToShow = [
     status: "מעבדה",
     number: 315475,
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-    barcode: <img src="https://barcode.tec-it.com/barcode.ashx?data=01234567&code=Code11&dmsize=Default&eclevel=L" alt="" />
+   
   },
 ];
 
 function Main() {
 
   const [set, setSet] = useState("")
+  const [focus, setFocus] = useState(false)
 
+  
   return (
     <div className="Main">
       <div className="MainHeader">
-        <MainHeader options={dataToShow} onChange={setSet}/>
+        <MainHeader focus={focus} options={dataToShow} onChange={setSet}/>
       </div>
       <div className="testLine">
         <TestLine details={dataToShow} filtering={set} />
@@ -128,8 +123,8 @@ function Main() {
           <FloatingButton />
           <PopModal />
         </div>
-        <div className="MainRightLogo">
-          <img className="MagIcon" src={Mag} alt="" />
+        <div onClick={() => setFocus(true)} className="MainRightLogo">
+          <img className="MagIcon"  src={Mag} alt="" />
         </div>
       </div>
     </div>

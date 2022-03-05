@@ -39,3 +39,9 @@
 .Main::-webkit-scrollbar {
   display: none;
 }
+.MainRightLogo{
+  margin: 35px;
+}
+.MainLeftLogo{
+  margin: 35px;
+}
