@@ -5,6 +5,7 @@ import Modal from "../PopModal/PopModal";
 
 function TestLine({ details, filtering }) {
   const [open, setOpen] = useState(false);
+  const [number, setNumber] = useState(false);
   const onOpenModal = () => setOpen(true);
 
   if (details.length === 0) {
@@ -24,14 +25,13 @@ function TestLine({ details, filtering }) {
               return val;
             } else if (val.status.includes(filtering)) {
               return val;
+            }else if (val.number.includes(filtering)) {
+              return val;
             }
           })
           .map((detail) => (
             <div className="TestLineWrapper">
-              <div
-                className="TestLine"
-                onClick={onOpenModal}
-              >
+              <div className="TestLine" onClick={() => { onOpenModal(); setNumber(detail.number);}}>
                 <div className="TestType">{detail.test}</div>
                 <div className="TestData">
                   <div className="PatientName">{detail.name}</div>
@@ -39,9 +39,8 @@ function TestLine({ details, filtering }) {
                   <div className="TestTime">{detail.time}</div>
                 </div>
                 <div className="TestStatus">
-                  <div className="Number">מס' בדיקה:{detail.number}</div>
+                  <div className="Number">מס' בדיקה: {detail.number}</div>
                   <div className="Status">סטטוס: {detail.status}</div>
-                  <div className="Status">asd{detail.modal}</div>
                 </div>
                 <div></div>
               </div>
@@ -49,7 +48,7 @@ function TestLine({ details, filtering }) {
             </div>
           ))}
         <Modal
-          details={details}
+          details={number}
           variant="testline"
           open={open}
           closeIt={(open) => setOpen(false)}

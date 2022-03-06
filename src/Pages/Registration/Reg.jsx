@@ -83,7 +83,7 @@ function Login({ handleClick }) {
                   id="phone"
                 />
                 <Datepicker getDate={(date) => setDatevalue(date)} />
-                <Select onChange={(e) => setHMOvalue(e.target.value)} />
+                <Select label="קופת חולים" variant={"HMO"} onChange={(e) => setHMOvalue(e.target.value)} />
                 <Button
                   type="submit"
                   fullWidth

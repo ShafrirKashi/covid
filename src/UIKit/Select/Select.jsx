@@ -18,7 +18,7 @@ export default function BasicSelect({onChange, variant, label}) {
 
   const [HMO, setHMO] = React.useState("");
   
-  if (variant === HMO){
+  if (variant === "HMO"){
     return (
       <CacheProvider value={cacheRtl}>
         <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
@@ -42,7 +42,7 @@ export default function BasicSelect({onChange, variant, label}) {
         </Box>
       </CacheProvider>
     );
-  }else if(variant == "city"){
+  }else if(variant === "city"){
     return (
       <CacheProvider value={cacheRtl}>
       <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>

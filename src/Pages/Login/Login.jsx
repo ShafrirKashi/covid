@@ -35,20 +35,20 @@ const [phoneError, setPhoneError] = useState(false)
   //   });
   // };
   
-  if(id ===""){
-    setIdError(true)
-  }
-  if(phone ===""){
-    setPhoneError(true)
-  }
+  // if(id ===""){
+  //   setIdError(true)
+  // }
+  // if(phone ===""){
+  //   setPhoneError(true)
+  // }
 
-  const handleSubmit = (e) =>{
-    e.preventDefault();
+  // const handleSubmit = (e) =>{
+  //   e.preventDefault();
 
-    if(id && phone){
-      console.log(id, phone)
-    }
-  }
+  //   if(id && phone){
+  //     console.log(id, phone)
+  //   }
+  // }
 
   return (
     <div className="login">
@@ -72,7 +72,7 @@ const [phoneError, setPhoneError] = useState(false)
             
               <Box
                 component="form"
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
                 noValidate
                 sx={{
                   mt: 2,
@@ -81,7 +81,7 @@ const [phoneError, setPhoneError] = useState(false)
                   alignItems: "start",
                 }}
               >
-                  <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+                  <form noValidate autoComplete="off" >
                 <Input
                   onChange={(e) => setID(e.target.value)}
                   margin="normal"
@@ -131,7 +131,7 @@ const [phoneError, setPhoneError] = useState(false)
                   />
                 </Box>
                 <Button
-                  // href="/main"
+                  href="/main"
                   type="submit"
                   fullWidth
                   variant="contained"
