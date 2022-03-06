@@ -2,7 +2,7 @@
   width: 100vw;
   height: 7rem;
   display: flex;
-align-items: center;
+  align-items: center;
   padding-right: 12px;
   box-sizing: border-box;
   font-family: "Rubik";
@@ -11,38 +11,61 @@ align-items: center;
   width: 3rem;
   font-family: "Rubik";
 }
-.TestLineWrapper{
+.TestLineWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
   margin: 10px;
   border-radius: 12px;
-
-
 }
-.TestType{
+.TestType {
   height: 100%;
-  padding-top:2rem;
+  padding-top: 2rem;
 }
-.PatientName{
-  font-size: 1.23rem;
-}
-.TestData{
+.patientData {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: yellow; */
+  width: 17rem;
   height: 4.5rem;
-  width: 7rem;
-  margin-right: 1rem;
+  padding-right: 1rem;
+}
+.PatientName {
+  font-size: 1.23rem;
+  width: 272px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+  /* background-color: green; */
+
+
+}
+.PatientInfo {
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  /* background-color: green; */
+  margin-top: 5px;
+}
+.TestData {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* background-color: red; */
+  width: 65%;
 }
-.TestLineGod{
+.TestLineGod {
   height: 36rem;
   overflow: scroll;
 }
 .TestLineGod::-webkit-scrollbar {
   display: none;
 }
-.TestStatus{
-  width: 8rem;
+.TestStatus {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  /* background-color: blue; */
 }

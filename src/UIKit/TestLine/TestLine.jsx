@@ -25,24 +25,33 @@ function TestLine({ details, filtering }) {
               return val;
             } else if (val.status.includes(filtering)) {
               return val;
-            }else if (val.number.includes(filtering)) {
+            } else if (val.number.includes(filtering)) {
               return val;
             }
           })
           .map((detail) => (
             <div className="TestLineWrapper">
-              <div className="TestLine" onClick={() => { onOpenModal(); setNumber(detail.number);}}>
+              <div
+                className="TestLine"
+                onClick={() => {
+                  onOpenModal();
+                  setNumber(detail.number);
+                }}
+              >
                 <div className="TestType">{detail.test}</div>
+                  <div className="patientData">
+                <div className="PatientName">{detail.name}</div>
+                <div className="PatientInfo">
                 <div className="TestData">
-                  <div className="PatientName">{detail.name}</div>
                   <div className="TestDate">{detail.date}</div>
                   <div className="TestTime">{detail.time}</div>
                 </div>
                 <div className="TestStatus">
                   <div className="Number">מס' בדיקה: {detail.number}</div>
                   <div className="Status">סטטוס: {detail.status}</div>
+                  </div>
                 </div>
-                <div></div>
+                </div>
               </div>
               <Dots />
             </div>

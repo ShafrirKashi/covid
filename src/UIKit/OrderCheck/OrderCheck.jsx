@@ -14,33 +14,28 @@ import './OrderCheck.css'
 
 const steps = [
   {
-    label: "בחר עיר",
     description:
     <div className="Sele">
-    <Select variant="city" label="קופת חולים" />
+    <Select variant="city" label="בחר עיר" />
     </div>
   },
   {
-    label: "בחר תחנת בדיקה",
     description:   <div className="Sele">
-    <Select variant="city" label="קופת חולים" />
+    <Select variant="city" label="בחר תחנת בדיקה" />
     </div>
     
   },
   {
-    label: "בחר תאריך בדיקה",
     description:   <div className="Sele">
-    <Select variant="city" label="קופת חולים" />
+    <Select variant="city" label="בחר תאריך בדיקה" />
     </div>
   },
   {
-    label: "בחר שעת בדיקה",
     description:    <div className="Sele">
-    <Select variant="city" label="קופת חולים" />
+    <Select variant="city" label="בחר שעת בדיקה" />
     </div>
   },
 ];
-
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -57,8 +52,8 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <div className="VerticalLinearStepper" >
-      <Stepper alternativeLabel activeStep={activeStep} orientation="vertical">
+    <Box sx={{ maxWidth: 400 }}>
+      <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
             <StepLabel>
@@ -66,39 +61,36 @@ export default function VerticalLinearStepper() {
             </StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
-              <div className="mashu" >
-                <div>
+              <Box sx={{ mb: 2 }}>
+                <div className="OrderCheck__Btn">
                   <Button
                     variant="contained"
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? "המשך" : "המשך"}
+                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    חזור
+                    Back
                   </Button>
                 </div>
-              </div>
+              </Box>
             </StepContent>
           </Step>
         ))}
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>כל השלבים הושלמו בהצלחה!</Typography>
-          <Button type="submit"  href="/main"  sx={{ mt: 1, mr: 0 }}>
-            הזמן בדיקה
-          </Button>
-          <Button type="submit" onClick={handleReset} sx={{ mt: 1, mr: 3.5 }}>
-             מלא מחדש
+          <Typography>All steps completed - you&apos;re finished</Typography>
+          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+            Reset
           </Button>
         </Paper>
       )}
-    </div>
+    </Box>
   );
 }

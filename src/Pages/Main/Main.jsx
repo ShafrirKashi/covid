@@ -34,7 +34,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "רונית מימון",
+    name: "רונית אבוחצירא דוסטויבסקי",
     test: <img className="testLogo" src={Mosdi} alt="" />,
     date: "17/4/2023",
     time: "08:45",
@@ -61,7 +61,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "שני טלקר",
+    name: "יעקב אחימאיר",
     test: <img className="testLogo" src={PCR} alt="" />,
     date: "21/7/2022",
     time: "13:20",
@@ -76,25 +76,6 @@ const dataToShow = [
     time: "17:11",
     status: "תחנת בדיקה",
     number:"853632",
-    qr: <img className="QR__Img" src={QRcode} alt="" />,
-   
-  },
-  {
-    name: "שי ביטן",
-    test: <img className="testLogo" src={Mosdi} alt="" />,
-    date: "17/2/2022",
-    time: "15:50",
-    status: "ממתין",
-    number: "558681",
-    qr: <img className="QR__Img" src={QRcode} alt="" />,
-  },
-  {
-    name: "מעיין רביץ",
-    test: <img className="testLogo" src={Antigen} alt="" />,
-    date: "18/4/2022",
-    time: "20:40",
-    status: "מעבדה",
-    number: "315475",
     qr: <img className="QR__Img" src={QRcode} alt="" />,
    
   },

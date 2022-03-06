@@ -114,7 +114,10 @@
   
   .Add{
     width: 23rem;
-    height: 43rem;
+    height: 33rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .delete{
     width: 23rem;
