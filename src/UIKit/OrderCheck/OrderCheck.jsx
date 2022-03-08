@@ -6,36 +6,11 @@ import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
-import Select from "../../UIKit/Select/Select"
-import Input from "../../UIKit/Input/Input"
+import Select from "../../UIKit/Select/Select";
+import Autocomplete from "../../UIKit/Autocomplete/Autocomplete";
 import Typography from "@mui/material/Typography";
-import './OrderCheck.css'
+import "./OrderCheck.css";
 
-
-const steps = [
-  {
-    description:
-    <div className="Sele">
-    <Select variant="city" label="בחר עיר" />
-    </div>
-  },
-  {
-    description:   <div className="Sele">
-    <Select variant="city" label="בחר תחנת בדיקה" />
-    </div>
-    
-  },
-  {
-    description:   <div className="Sele">
-    <Select variant="city" label="בחר תאריך בדיקה" />
-    </div>
-  },
-  {
-    description:    <div className="Sele">
-    <Select variant="city" label="בחר שעת בדיקה" />
-    </div>
-  },
-];
 export default function VerticalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -51,14 +26,47 @@ export default function VerticalLinearStepper() {
     setActiveStep(0);
   };
 
+  const steps = [
+    {
+      label: "עיר",
+      description: (
+        <div className="Sele">
+          <Autocomplete disablePortal variant="city" label="בחר עיר" />
+        </div>
+      ),
+    },
+    {
+      label: "תחנת בדיקה",
+      description: (
+        <div className="Sele">
+          <Select variant="city" label="בחר תחנת בדיקה" />
+        </div>
+      ),
+    },
+    {
+      label: "תאריך בדיקה",
+      description: (
+        <div className="Sele">
+          <Select variant="city" label="בחר תאריך בדיקה" />
+        </div>
+      ),
+    },
+    {
+      label: "שעת בדיקה",
+      description: (
+        <div className="Sele">
+          <Select variant="city" label="בחר שעת בדיקה" />
+        </div>
+      ),
+    },
+  ];
+
   return (
     <Box sx={{ maxWidth: 400 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((step, index) => (
           <Step key={step.label}>
-            <StepLabel>
-              {step.label}
-            </StepLabel>
+            <StepLabel>{step.label}</StepLabel>
             <StepContent>
               <Typography>{step.description}</Typography>
               <Box sx={{ mb: 2 }}>
@@ -68,14 +76,14 @@ export default function VerticalLinearStepper() {
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === steps.length - 1 ? 'Finish' : 'Continue'}
+                    {index === steps.length - 1 ? "סיים" : "המשך"}
                   </Button>
                   <Button
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
+                    חזור
                   </Button>
                 </div>
               </Box>
@@ -85,9 +93,13 @@ export default function VerticalLinearStepper() {
       </Stepper>
       {activeStep === steps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Typography>All steps completed - you&apos;re finished</Typography>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
+          <Typography></Typography>
+          <Button
+            variant="contained"
+            onClick={handleReset}
+            sx={{ width: 300, mt: 1, mr: 1 }}
+          >
+            הזמן בדיקה
           </Button>
         </Paper>
       )}

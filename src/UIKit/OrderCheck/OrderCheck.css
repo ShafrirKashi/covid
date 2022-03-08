@@ -42,3 +42,8 @@
 .css-14sza3e-MuiStepLabel-root.MuiStepLabel-alternativeLabel{
     align-items: flex-start;
 }
+.MuiStepLabel-label{
+    display: flex !important;
+    justify-content: flex-start!important;
+    margin-right: 10px !important;
+}

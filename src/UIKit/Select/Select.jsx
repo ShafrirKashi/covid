@@ -16,8 +16,16 @@ const cacheRtl = createCache({
 
 export default function BasicSelect({onChange, variant, label}) {
 
-  const [HMO, setHMO] = React.useState("");
+  const [hmo, setHMO] = React.useState("");
+  const [city, setCity] = React.useState("");
   
+
+  const handleChangeHMO = (event) => {
+    setHMO(event.target.value)}
+
+  const handleChangeCity = (event) => {
+    setCity(event.target.value)}
+
   if (variant === "HMO"){
     return (
       <CacheProvider value={cacheRtl}>
@@ -25,11 +33,9 @@ export default function BasicSelect({onChange, variant, label}) {
           <FormControl fullWidth>
             <InputLabel id="demo-simple-select-label">{label}</InputLabel>
             <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              value={HMO}
+              value={hmo}
               label="קופת חולים"
-              onChange={onChange}
+              onChange={handleChangeHMO}
               variant="standard"
             >
               <MenuItem value={"leumit"}>לאומית</MenuItem>
@@ -51,16 +57,16 @@ export default function BasicSelect({onChange, variant, label}) {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            value={HMO}
+            value={city}
             label="קופת חולים"
-            onChange={onChange}
+            onChange={handleChangeCity}
             variant="outlined"
           >
-            <MenuItem value={"leumit"}>לאומית</MenuItem>
-            <MenuItem value={"clalit"}>כללית</MenuItem>
-            <MenuItem value={"meuhedet"}>מאוחדת</MenuItem>
-            <MenuItem value={"maccabi"}>מכבי</MenuItem>
-            <MenuItem value={"idf"}>צה"ל</MenuItem>
+            <MenuItem value={"RishonLezion"}>ראשון לציון</MenuItem>
+            <MenuItem value={"Haifa"}>חיפה</MenuItem>
+            <MenuItem value={"TLV"}>תל אביב</MenuItem>
+            <MenuItem value={"Jerusalem"}>ירושלים</MenuItem>
+            <MenuItem value={"ashdod"}>אשדוד</MenuItem>
           </Select>
         </FormControl>
       </Box>

@@ -100,7 +100,7 @@ function Main() {
           <img className="BellIcon" src={Bell} alt="" />
         </div>
         <div className="FloatingButton">
-          <FloatingButton />
+          <FloatingButton variant="add" />
           <PopModal />
         </div>
         <div onClick={() => setFocus(true)} className="MainRightLogo">

@@ -1,126 +1,158 @@
 .react-responsive-modal-root {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.react-responsive-modal-overlay {
+  background: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.modal__btn {
+  background-color: transparent;
+  width: 20rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-top: 2rem;
+}
+.react-responsive-modal-container {
+  height: 100%;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+
+/* Used to trick the browser to center the modal content properly  */
+.react-responsive-modal-containerCenter:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.react-responsive-modal-modal {
+  max-width: 800px;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  background: #ffffff;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+  margin: 1.2rem;
+  /* padding: 1.2rem; */
+  position: relative;
+  overflow-y: auto;
+}
+
+.react-responsive-modal-closeButton {
+  position: absolute;
+  top: 11px;
+  right: 19.5rem;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+}
+
+@keyframes react-responsive-modal-overlay-in {
+  0% {
+    opacity: 0;
   }
-  
-  .react-responsive-modal-overlay {
-    background: rgba(0, 0, 0, 0.63);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+  100% {
+    opacity: 1;
   }
-  .modal__btn{
-    background-color: transparent;
-    width: 20rem;
-    height: 2rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    margin-top: 2rem;
+}
+
+@keyframes react-responsive-modal-overlay-out {
+  0% {
+    opacity: 1;
   }
-  .react-responsive-modal-container {
-    height: 100%;
-    outline: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-align: center;
+  100% {
+    opacity: 0;
   }
-  
-  /* Used to trick the browser to center the modal content properly  */
-  .react-responsive-modal-containerCenter:after {
-    width: 0;
-    height: 100%;
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
+}
+
+@keyframes react-responsive-modal-modal-in {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
   }
-  
-  .react-responsive-modal-modal {
-    max-width: 800px;
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-    background: #ffffff;
-    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
-    margin: 1.2rem;
-    /* padding: 1.2rem; */
-    position: relative;
-    overflow-y: auto;
+  100% {
+    transform: scale(100%);
+    opacity: 1;
   }
-  
-  .react-responsive-modal-closeButton {
-    position: absolute;
-    top: 11px;
-    right: 19.5rem;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    background-color: white;
-    display: flex;
+}
+
+@keyframes react-responsive-modal-modal-out {
+  0% {
+    transform: scale(100%);
+    opacity: 1;
   }
-  
-  @keyframes react-responsive-modal-overlay-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    transform: scale(0.96);
+    opacity: 0;
   }
-  
-  @keyframes react-responsive-modal-overlay-out {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
-  @keyframes react-responsive-modal-modal-in {
-    0% {
-      transform: scale(0.96);
-      opacity: 0;
-    }
-    100% {
-      transform: scale(100%);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes react-responsive-modal-modal-out {
-    0% {
-      transform: scale(100%);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0.96);
-      opacity: 0;
-    }
-  }
-  .QR{
-    width: 22rem;
-    height: 25rem;
-  }
-  
-  .Add{
-    width: 23rem;
-    height: 33rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .delete{
-    width: 23rem;
-    height: 10rem;
-  }
-  
+}
+.QR {
+  width: 22rem;
+  height: 25rem;
+}
+
+.Add {
+  width: 23rem;
+  height: 43rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.delete {
+  width: 23rem;
+  height: 10rem;
+}
+.orderCheckHeader {
+  height: 5rem;
+  display: flex;
+  width: 100%;
+  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+.btn_child{
+  position: relative;
+  bottom: 2rem;
+}
+.orderCheckBottom{
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  justify-content: center;
+}
+.addChildContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22rem;
+  height: 30rem;
+}
+.addChildHeader{
+  width: 100%;
+  height: 4rem;
+  background-color: rgb(240, 240, 240);
+  border-bottom: 1px solid rgb(207, 207, 207);
+
+}
