@@ -55,7 +55,15 @@ cursor: pointer;
 .muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
             width: 22.3rem !important;
 }
+.HamburgerIcon{
+    position: absolute;
+    right: 320px;
+    top: 34px;
+    z-index: 9999;
+    width: 4rem;
+    border-radius: 55px 1px 1px 55px ;
 
+}
   
 
 
