@@ -1,0 +1,127 @@
+.ManagerMain {
+    height: 100%;
+    font-family: Rubik;
+    overflow: hidden;
+    
+  }
+  .css-19kzrtu{
+      padding: 0 !important;
+  }
+  .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
+      min-width: 80px !important;
+  }
+  .MaganerTop {
+    height: 5rem;
+  }
+  .ManagerSwitch {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+  }
+  .ManagerHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+  }
+  .ManagerSum {
+    background-color: rgb(250, 250, 250);
+    width: 100%;
+    height: 14rem;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .SumTop {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.7rem;
+    /* background-color: red; */
+  }
+  .TestsDone {
+    width: 50%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .TestsOrder {
+    width: 50%;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+  }
+  .SumBottom {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: green; */
+  }
+  .AverageTest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .AverageLine {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .Time {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  .TestStatus {
+    width: 100%;
+    height: 9rem;
+  }
+  .TestNow {
+  }
+  .TestNext {
+  }
+  .Packages {
+    width: 100%;
+    height: 13rem;
+    background-color: ;
+    background-color: rgb(250, 250, 250);
+    overflow: scroll;
+    border-top: 1px solid rgb(185, 185, 185);
+    border-bottom: 1px solid rgb(185, 185, 185);
+  
+  }
+  .ManagerBottom {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+  }
+  .ManagerCalender{
+  
+  }
+  .MaganerStaff{
+  
+  }
+  .ManagerDashboard{
+  
+  }
+  .ManagerPackages{
+  
+  }
+  .ManagerCheck{
+  
+  }
+  

@@ -1,46 +1,60 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import CircularProgress from '@mui/material/CircularProgress';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import React from "react";
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import "./CircularProgress.css";
+function CircularProgress({done, ordered, max, variant}) {
 
-function CircularProgressWithLabel(props) {
-  return (
-    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress size="5rem" thickness="7" variant="determinate" {...props} />
-      <Box
-        sx={{
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-          position: 'absolute',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          
-        }}
-      >
-        <Typography variant="caption" component="div" color="text.secondary">
-          {`${Math.round(props.value)}%`}
-        </Typography>
-      </Box>
-    </Box>
-  );
+  // const ordered = 2968;
+  const DonePercentage = (Math.ceil((done * 100) / ordered));
+  const OrderedPercentage = (Math.ceil((ordered * 100) / max));
+  if(variant === "done"){
+      return (
+        <div className="circular-progress">
+          <CircularProgressbarWithChildren
+            value={DonePercentage}
+            styles={buildStyles({
+              strokeLinecap: "butt",
+              textSize: "15px",
+              pathColor: `rgba(3, 154, 251)`,
+              textColor: "#000000",
+              trailColor: "#d6d6d6",
+              backgroundColor: "#3e98c7",
+            })}
+          >
+            <p className="circular-progress-percentage">{DonePercentage}%</p>
+            <p className="circular-progress-text">
+              {done}/{ordered}
+            </p>
+          </CircularProgressbarWithChildren>
+        </div>
+      );
+  }else{
+    return (
+      <div className="circular-progress">
+        <CircularProgressbarWithChildren
+          value={OrderedPercentage}
+          styles={buildStyles({
+            strokeLinecap: "butt",
+            textSize: "15px",
+            pathColor: `rgba(3, 154, 251)`,
+            textColor: "#000000",
+            trailColor: "#d6d6d6",
+            backgroundColor: "#3e98c7",
+          })}
+        >
+          <p className="circular-progress-percentage">{OrderedPercentage}%</p>
+          <p className="circular-progress-text">
+            {ordered}/{max}
+          </p>
+        </CircularProgressbarWithChildren>
+      </div>
+    );
+  }
+
+
 }
 
-CircularProgressWithLabel.propTypes = {
-  /**
-   * The value of the progress indicator for the determinate variant.
-   * Value between 0 and 100.
-   * @default 0
-   */
-  value: PropTypes.number.isRequired,
-};
-
-export default function CircularStatic() {
-  const [progress, setProgress] = React.useState(44);
-
-
-  return <CircularProgressWithLabel value={progress} />;
-}
+export default CircularProgress;
