@@ -10,6 +10,7 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined';
 import Dashboard from '../../Pages/Dashboard/Dashboard'
+import './IconTabs.css'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

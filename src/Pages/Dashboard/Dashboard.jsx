@@ -57,12 +57,12 @@ function Manager() {
       <div className="ManagerSum">
         <div className="SumTop">
           <div className="TestsDone">
-            <p>בדיקות שבוצעו</p>
+            <span>בדיקות שבוצעו</span>
             <CircularProgress variant="done" ordered={2258} done={1512} />
           </div>
           <div className="TestsOrder">
-            <p>תורים שהוזמנו</p>
-            <CircularProgress max={5000} ordered={2258} />
+            <span>תורים שהוזמנו</span>
+            <CircularProgress max={15000} ordered={12258} />
           </div>
         </div>
         <div className="SumBottom">
@@ -77,8 +77,12 @@ function Manager() {
         </div>
       </div>
       <div className="TestStatus">
-        <div className="TestNow"></div>
-        <div className="TestNext"></div>
+        <div className="TestNow">
+            <span>נבדק כעת: עמדה 1 מס' 465</span>
+            </div>
+        <div className="TestNext">
+        <span>נבדק הבא: עמדה 3 מס' 425</span>
+            </div>
       </div>
       <div className="Packages">
           <Table />
