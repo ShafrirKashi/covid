@@ -4,3 +4,6 @@
 .css-1ujnqem-MuiTabs-root{
     background-color: rgb(230, 238, 243);
 }
+.css-jpln7h-MuiTabs-scroller{
+    width: 100vw !important;
+}

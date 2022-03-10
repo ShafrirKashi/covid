@@ -47,11 +47,10 @@ function Manager() {
           <Switch StateChanger={setChecked} />
         </div>
         <div className="ManagerHeader">
-          <div className="asd">
-            <p>
-              יום {<Day />} {Dates} - תחנת רמת החיל
-            </p>
-          </div>
+          <span>
+            יום {<Day />} {Dates} - תחנת רמת החיל
+          </span>
+          <span className="StationTime">שעות פעילות תחנה: 7:00 - 21:00</span>
         </div>
       </div>
       <div className="ManagerSum">
@@ -76,18 +75,10 @@ function Manager() {
           </div>
         </div>
       </div>
-      <div className="TestStatus">
-        <div className="TestNow">
-            <span>נבדק כעת: עמדה 1 מס' 465</span>
-            </div>
-        <div className="TestNext">
-        <span>נבדק הבא: עמדה 3 מס' 425</span>
-            </div>
-      </div>
+
       <div className="Packages">
-          <Table />
+        <Table />
       </div>
-   
     </div>
   );
 }
