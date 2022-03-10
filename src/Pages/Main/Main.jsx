@@ -9,8 +9,7 @@ import barcode from "../../Assets/img/barcode.png";
 import PCR from "../../Assets/img/pcrLogo.png";
 import Antigen from "../../Assets/img/antigenLogo.png";
 import Mosdi from "../../Assets/img/mosdiLogo.png";
-import Bell from "../../Assets/img/bell.png";
-import Mag from "../../Assets/img/mag.png";
+
 import "./Main.css";
 
 
@@ -25,7 +24,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "מאיר שלו",
+    name: "רונן כץ",
     test: <img className="testLogo" src={Antigen} alt="" />,
     date: "3/7/2021",
     time: "11:20",
@@ -34,7 +33,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "רונית אבוחצירא דוסטויבסקי",
+    name: "עומר כץ",
     test: <img className="testLogo" src={Mosdi} alt="" />,
     date: "17/4/2023",
     time: "08:45",
@@ -43,7 +42,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "טל כהן",
+    name: "דניאל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
     date: "22/5/2022",
     time: "18:10",
@@ -52,7 +51,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "איציק מרציאנו",
+    name: "רונן כץ",
     test: <img className="testLogo" src={Mosdi} alt="" />,
     date: "12/8/2022",
     time: "12:30",
@@ -61,7 +60,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "יעקב אחימאיר",
+    name: "רונן כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
     date: "21/7/2022",
     time: "13:20",
@@ -70,7 +69,7 @@ const dataToShow = [
     qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
   {
-    name: "מאיר דהן",
+    name: "יעל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
     date: "12/5/2022",
     time: "17:11",
@@ -84,29 +83,24 @@ const dataToShow = [
 function Main() {
 
   const [set, setSet] = useState("")
-  const [focus, setFocus] = useState(false)
 
   
   return (
     <div className="Main">
       <div className="MainHeader">
-        <MainHeader focus={focus} options={dataToShow} onChange={setSet}/>
+        <MainHeader options={dataToShow} onChange={setSet}/>
       </div>
       <div className="testLine">
         <TestLine details={dataToShow} filtering={set} />
       </div>
-      <div className="Bottom">
-        <div className="MainLeftLogo">
-          <img className="BellIcon" src={Bell} alt="" />
-        </div>
+   
+        
         <div className="FloatingButton">
           <FloatingButton variant="add" />
           <PopModal />
         </div>
-        <div onClick={() => setFocus(true)} className="MainRightLogo">
-          <img className="MagIcon"  src={Mag} alt="" />
-        </div>
-      </div>
+        
+      
     </div>
   );
 }

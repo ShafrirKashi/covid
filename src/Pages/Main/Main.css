@@ -11,15 +11,6 @@
   overflow: hidden;
 }
 
-.Bottom {
-  width: 100%;
-  background-color: rgb(206, 216, 221);
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: sticky;
-}
 .testLine {
   width: 100vw;
   height: 35.5rem;
@@ -27,6 +18,7 @@
 .FloatingButton {
   position: relative;
   bottom: 1rem;
+  right: 20rem;
 }
 .QR__Img {
   width: 100%;
@@ -38,10 +30,4 @@
 }
 .Main::-webkit-scrollbar {
   display: none;
-}
-.MainRightLogo{
-  margin: 35px;
-}
-.MainLeftLogo{
-  margin: 35px;
 }

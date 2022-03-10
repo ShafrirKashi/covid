@@ -1,70 +1,72 @@
-.MainHeader{
-    /* background-image: url("../../Assets/img/background.jpg"); */
-    background-position: 0px 0px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 26rem !important;
-    height: 6.7rem !important;
-    position: sticky;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-   
+.MainHeader {
+  /* background-image: url("../../Assets/img/background.jpg"); */
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 27rem !important;
+  height: 8.7rem !important;
+  position: sticky;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.SearchMainWrapper{
-    width: 25rem !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-
+.SearchMainWrapper {
+  width: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.LogoMainPage{
-    width: 10rem;
+.MainHeaderDefault {
+  height: 8.7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(214, 223, 235);
+  position: relative;
+  border-bottom: 1px solid rgb(206, 206, 206);
 }
-.MainRightLogo{
-    /* background-color: blue; */
-    width: 17%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.MainLogos {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  padding-right: 25px;
+  padding-left: 25px;
+  background-color: green;
 }
-.MainLeftLogo{
-    /* background-color: yellow; */
-    width: 17%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.MainLogoText {
+  font-family: Rubik;
+  font-size: 1.3rem;
+  position: relative;
+  bottom: 1px;
+  right: 14px;
 }
-.BellIcon{
-width: 25px;
-height: 25px;
-margin: 5px;
-cursor: pointer;
+.SearchMain {
+  height: 7rem;
+  width: 27rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.MagIcon{
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    cursor: pointer;
-
+.LogoMainPage {
+  width: 10rem;
 }
-.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
-            width: 22.3rem !important;
+.BellIcon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  cursor: pointer;
 }
-.HamburgerIcon{
-    position: absolute;
-    right: 320px;
-    top: 34px;
-    z-index: 9999;
-    width: 4rem;
-    border-radius: 55px 1px 1px 55px ;
-
+.MagIcon {
+    width: 20px;
+  height: 20px;
+  margin: 5px;
+  cursor: pointer;
 }
-  
-
-
-
+.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  width: 22.3rem !important;
+}
