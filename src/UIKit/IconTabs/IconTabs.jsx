@@ -11,6 +11,7 @@ import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import FactCheckOutlinedIcon from '@mui/icons-material/FactCheckOutlined';
 import Dashboard from '../../Pages/Dashboard/Dashboard'
 import Staff from '../../Pages/Staff/Staff'
+import Calender from '../../Pages/Calender/Calender'
 import './IconTabs.css'
 
 function TabPanel(props) {
@@ -69,7 +70,7 @@ export default function BasicTabs() {
         <Staff />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item 5
+        <Calender />
       </TabPanel>
       </Box>
       <Box sx={{display: "flex", justifyContent:"space-around", alignItems: "center", borderBottom: 1, borderColor: "divider" }}>
