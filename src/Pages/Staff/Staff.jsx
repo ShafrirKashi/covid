@@ -1,5 +1,6 @@
 import * as React from "react";
 import { DataGrid } from "@mui/x-data-grid";
+import WorkerLine from '../../UIKit/WorkerLine/WorkerLine'
 import "./Staff.css";
 
 const columns = [
@@ -8,28 +9,25 @@ const columns = [
   { field: "lastName", headerName: "מספר עובד", width: 130 },
 ];
 
-const rows = [
-  { id: 1, Name: "מוטי כץ", Occupation: "בודק" },
-  { id: 2, Name: "רוני אליהו", Occupation: "בודק" },
-  { id: 3, Name: "שלומי כהן", Occupation: "בודק" },
-  { id: 4, Name: "מאיר משולם", Occupation: "בודק" },
-  { id: 5, Name: "רוויטל סוויד", Occupation: "בודק" },
-  { id: 6, Name: "שי נחום", Occupation: "בודק" },
-  { id: 7, Name: "רונן פרץ", Occupation: "בודק" },
-  { id: 8, Name: "איתי שדה", Occupation: "בודק" },
-  { id: 9, Name: "אייל קרמר", Occupation: "בודק" },
+const rowsData = [
+  { id: 1, name: "מוטי כץ", occupation: "בודק", workerNum:"293847"},
+  { id: 2, name: "רוני אליהו", occupation: "בודק" , workerNum:"356344"},
+  { id: 3, name: "שלומי כהן", occupation: "בודק", workerNum:"634642" },
+  { id: 4, name: "מאיר משולם", occupation: "בודק", workerNum:"833574" },
+  { id: 5, name: "רוויטל סוויד", occupation: "בודק", workerNum:"253463" },
+  { id: 6, name: "שי נחום", occupation: "בודק", workerNum:"611353" },
+  { id: 7, name: "רונן פרץ", occupation: "בודק" , workerNum:"834376"},
+  { id: 8, name: "איתי שדה", occupation: "בודק" , workerNum:"127492"},
+  { id: 9, name: "אייל קרמר", occupation: "בודק" , workerNum:"425634"},
+  { id: 10, name: "זאב לוי", occupation: "בודק" , workerNum:"763424"},
+  { id: 11, name: "אייל קרמר", occupation: "בודק" , workerNum:"427184"},
+  { id: 12, name: "שרון מרציאנו", occupation: "בודק" , workerNum:"960312"},
 ];
 
-export default function DataTable() {
+export default function DataTable({rows}) {
   return (
     <div className="staffMain" style={{ height: "93vh", width: "100vw" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={100}
-        rowsPerPageOptions={[5]}
-        // checkboxSelection
-      />
+   <WorkerLine rows={rowsData} />
     </div>
   );
 }
