@@ -34,7 +34,7 @@ export default function BasicTextFields({onChange, focus}) {
               <Box
                 component="form"
                 sx={{
-                  "& > :not(style)": { ml:1,mt: 1, width: 1 },
+                  "& > :not(style)": { ml:0,mt: 0, width: 1 },
                 }}
                 noValidate
                 autoComplete="off"

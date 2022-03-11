@@ -39,7 +39,6 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow:hidden;
-  /* background-color: green; */
 
 
 }
@@ -47,17 +46,15 @@
   display: flex;
   width: 100%;
   height: 3rem;
-  /* background-color: green; */
   margin-top: 5px;
 }
 .TestData {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
   width: 65%;
 }
 .TestLineGod {
-  height: 40rem;
+  height: 41rem;
   overflow: scroll;
 }
 .TestLineGod::-webkit-scrollbar {

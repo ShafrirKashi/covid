@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import MainHeader from "../../UIKit/MainHeader/MainHeader";
 import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 import TestLine from "../../UIKit/TestLine/TestLine";
@@ -11,7 +11,6 @@ import Antigen from "../../Assets/img/antigenLogo.png";
 import Mosdi from "../../Assets/img/mosdiLogo.png";
 
 import "./Main.css";
-
 
 const dataToShow = [
   {
@@ -74,33 +73,44 @@ const dataToShow = [
     date: "12/5/2022",
     time: "17:11",
     status: "תחנת בדיקה",
-    number:"853632",
+    number: "853632",
     qr: <img className="QR__Img" src={QRcode} alt="" />,
-   
+  },
+  {
+    name: "יעל כץ",
+    test: <img className="testLogo" src={PCR} alt="" />,
+    date: "12/5/2022",
+    time: "17:11",
+    status: "תחנת בדיקה",
+    number: "853632",
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
+  },
+  {
+    name: "יעל כץ",
+    test: <img className="testLogo" src={PCR} alt="" />,
+    date: "12/5/2022",
+    time: "17:11",
+    status: "תחנת בדיקה",
+    number: "853632",
+    qr: <img className="QR__Img" src={QRcode} alt="" />,
   },
 ];
 
 function Main() {
+  const [set, setSet] = useState("");
 
-  const [set, setSet] = useState("")
-
-  
   return (
     <div className="Main">
       <div className="MainHeader">
-        <MainHeader options={dataToShow} onChange={setSet}/>
+        <MainHeader options={dataToShow} onChange={setSet} />
       </div>
       <div className="testLine">
         <TestLine details={dataToShow} filtering={set} />
       </div>
-   
-        
-        <div className="FloatingButton">
-          <FloatingButton variant="add" />
-          <PopModal />
-        </div>
-        
-      
+      <div className="FloatingButton">
+        <FloatingButton variant="add" />
+        <PopModal />
+      </div>
     </div>
   );
 }

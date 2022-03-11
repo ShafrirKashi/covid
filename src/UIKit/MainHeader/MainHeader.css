@@ -3,40 +3,43 @@
   background-position: 0px 0px;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 27rem !important;
-  height: 8.7rem !important;
+  background: opacity(0.1);
+  width: 25.7rem !important;
+  height: 5rem !important;
   position: sticky;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-.SearchMainWrapper {
-  width: 26rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(195, 203, 233);
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+.SearchMainWrapper {
+  width: 25.7rem;
+  display: flex;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  background-color: rgb(247, 247, 247);
 }
 .MainHeaderDefault {
-  height: 8.7rem;
+  height: 5rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(214, 223, 235);
+  /* background-color: rgb(0, 109, 252); */
   position: relative;
   border-bottom: 1px solid rgb(206, 206, 206);
 }
 .MainLogos {
-  width: 100%;
+  width: 93%;
   height: 4rem;
   display: flex;
   align-items: center;
-  margin-top: 35px;
-  padding-right: 25px;
-  padding-left: 25px;
-  background-color: green;
+  justify-content: space-between;
+  /* background-color: green; */
 }
 .MainLogoText {
   font-family: Rubik;
@@ -45,12 +48,15 @@
   bottom: 1px;
   right: 14px;
 }
-.SearchMain {
-  height: 7rem;
-  width: 27rem;
+.shawrma {
+  /* position: relative;
+  bottom: 2rem; */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 5rem;
+  justify-content: space-between;
+}
+.dropDown {
+  display: flex;
 }
 .LogoMainPage {
   width: 10rem;
@@ -62,11 +68,23 @@
   cursor: pointer;
 }
 .MagIcon {
-    width: 20px;
+  width: 20px;
   height: 20px;
   margin: 5px;
   cursor: pointer;
 }
 .muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
   width: 22.3rem !important;
+}
+
+.ArrowIcon {
+  position: absolute;
+  right: 21.5rem;
+  bottom: 16px;
+  z-index: 200;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

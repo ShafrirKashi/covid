@@ -1,8 +1,7 @@
 .Main {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  align-items: flex-start;
   box-sizing: border-box;
   flex-direction: column;
   width: 100vw;
@@ -17,8 +16,7 @@
 }
 .FloatingButton {
   position: relative;
-  bottom: 1rem;
-  right: 20rem;
+  right: 9rem;
 }
 .QR__Img {
   width: 100%;
