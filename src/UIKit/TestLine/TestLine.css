@@ -6,6 +6,7 @@
   padding-right: 12px;
   box-sizing: border-box;
   font-family: "Rubik";
+  font-size: 14px;
 }
 .TestIcon {
   width: 3rem;
@@ -15,7 +16,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rgb(255, 255, 255); */
+  /* background-color: rgb(255, 0, 0); */
+  height: 5.6rem;
   /* margin: 10px; */
   /* border-radius: 12px; */
 }
@@ -34,7 +36,7 @@
   padding-right: 1rem;
 }
 .PatientName {
-  font-size: 1.23rem;
+  font-size: 1.1rem;
   width: 272px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -51,7 +53,7 @@
 .TestData {
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 42%;
 }
 .TestLineGod {
   height: 41rem;

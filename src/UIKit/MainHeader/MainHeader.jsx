@@ -17,6 +17,9 @@ function MainHeader({ onChange, focus }) {
         <div className="SearchMainWrapper">
           {state === false ? (
             <div className="MainHeaderDefault">
+              <div className="MainHeaderLogo">
+                <img src={Biduk} alt="" />
+                </div>
               <div className="MainLogos">
                 <div className="dropDown">
                   <Dropdown />
