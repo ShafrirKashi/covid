@@ -4,7 +4,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import PatientsList from '../../UIKit/PatientsList/PatientsList'
 import "./ManegerCalenderTabs.css";
+import patients from "../../APIcalls/Patients.json";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -57,37 +60,37 @@ export default function ManegerCalenderTabs() {
   // Today //
   let today = new Date();
   today.setDate(today.getDate() + 0);
-  let todayday = getDayName(today, "il-IL").split(" ");
+  let todayday = getDayName(today, "he-IL").split(" ");
 
   // Tomorrow //
   let tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  let tomorrowday = getDayName(tomorrow, "il-IL").split(" ");
+  let tomorrowday = getDayName(tomorrow, "he-IL").split(" ");
 
   // Three days //
   let three = new Date();
   three.setDate(three.getDate() + 2);
-  let threeday = getDayName(three, "il-IL").split(" ");
+  let threeday = getDayName(three, "he-IL").split(" ");
 
   // Four days //
   let four = new Date();
   four.setDate(four.getDate() + 3);
-  let fourday = getDayName(four, "il-IL").split(" ");
+  let fourday = getDayName(four, "he-IL").split(" ");
 
   // Five days //
   let five = new Date();
   five.setDate(five.getDate() + 4);
-  let fiveday = getDayName(five, "il-IL").split(" ");
+  let fiveday = getDayName(five, "he-IL").split(" ");
 
   // Six days //
   let six = new Date();
   six.setDate(six.getDate() + 5);
-  let sixday = getDayName(six, "il-IL").split(" ");
+  let sixday = getDayName(six, "he-IL").split(" ");
 
   // Seven days //
   let seven = new Date();
   seven.setDate(seven.getDate() + 6);
-  let sevenday = getDayName(seven, "il-IL").split(" ");
+  let sevenday = getDayName(seven, "he-IL").split(" ");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -167,7 +170,16 @@ export default function ManegerCalenderTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item 1
+        <div className="patientList">
+          {/* {patients.map((patient) => (
+            <div className="patientLine">
+              <div className="patientName">{patient.full_name}</div>
+              <div className="patientTestType">{patient.test_type}</div>
+              <div className="patientTime"> {patient.time}</div>
+            </div>
+          ))} */}
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two

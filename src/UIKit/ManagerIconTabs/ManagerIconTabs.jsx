@@ -13,6 +13,7 @@ import Dashboard from "../../Pages/Dashboard/Dashboard";
 import Staff from "../../Pages/Staff/Staff";
 import ManegerCalenderTabs from "../../UIKit/ManegerCalenderTabs/ManegerCalenderTabs";
 import "./ManagerIconTabs.css";
+import * as moment from "moment";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,6 +55,8 @@ export default function BasicTabs() {
     setValue(newValue);
   };
 
+  const NewDate = moment().format("DD/MM/yyyy");
+
   return (
     <Box sx={{ width: "100%" }}>
       <Box
@@ -80,8 +83,8 @@ export default function BasicTabs() {
         </TabPanel>
         <TabPanel value={value} index={4}>
           <div className="ManagerCalenderMain">
-            <span>תאריכים</span>
-            <span>asd</span>
+            <span>דף בדיקות עתידיות</span>
+            <span>{NewDate}</span>
             <div className="ManegerCalenderTabs">
               <ManegerCalenderTabs />
             </div>
