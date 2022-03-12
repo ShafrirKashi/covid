@@ -1,11 +1,11 @@
 import React from "react";
-import IconTabs from "../../UIKit/IconTabs/IconTabs";
+import ManagerIconTabs from "../../UIKit/ManagerIconTabs/ManagerIconTabs";
 import "./Manager.css";
 
 function Manager() {
   return (
     <div className="ManagerMain">
-      <IconTabs />
+      <ManagerIconTabs />
     </div>
   );
 }

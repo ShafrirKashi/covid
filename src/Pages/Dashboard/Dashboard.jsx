@@ -15,28 +15,20 @@ function Manager() {
     }
   };
 
-  let day = new Date().getDay() + 1;
+  let TheDay = new Date().getDay() + 1;
   let Dates = `${new Date().getDate()}.${
     new Date().getMonth() + 1
   }.${new Date().getFullYear()}`;
 
-  let Day = () => {
-    if (day === 1) {
-      return "א'";
-    } else if (day === 2) {
-      return "ב'";
-    } else if (day === 3) {
-      return "ג'";
-    } else if (day === 4) {
-      return "ד'";
-    } else if (day === 5) {
-      return "ה'";
-    } else if (day === 6) {
-      return "ו'";
-    } else if (day === 6) {
-      return "ש'";
-    }
-  };
+  console.log(Dates);
+
+  function getDayName(dateStr, locale) {
+    let date = new Date(dateStr);
+    return date.toLocaleDateString(locale, { weekday: "short" });
+  }
+  let today = new Date();
+  today.setDate(today.getDate() + 0);
+  let todayday = getDayName(today, "il-IL").split(" ");
 
   return (
     <div className="ManagerMain">
@@ -48,7 +40,7 @@ function Manager() {
         </div>
         <div className="ManagerHeader">
           <span>
-            יום {<Day />} {Dates} - תחנת רמת החיל
+            יום {todayday + ","} {Dates} - תחנת רמת החיל
           </span>
           <span className="StationTime">שעות פעילות תחנה: 7:00 - 21:00</span>
         </div>
