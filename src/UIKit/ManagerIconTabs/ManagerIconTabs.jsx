@@ -83,7 +83,7 @@ export default function BasicTabs() {
         </TabPanel>
         <TabPanel value={value} index={4}>
           <div className="ManagerCalenderMain">
-            <span>דף בדיקות עתידיות</span>
+            <span className="futureTestsSpan">דף בדיקות עתידיות</span>
             <span>{NewDate}</span>
             <div className="ManegerCalenderTabs">
               <ManegerCalenderTabs />

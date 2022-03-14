@@ -14,6 +14,18 @@
   width: 100%;
   height: 3rem;
 }
+.WorkerLineHeader {
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik";
+  font-size: 1.2rem;
+  position:static;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
 .WorkerName {
   height: 100%;
   width: 8rem;
@@ -41,7 +53,7 @@
 }
 .approveSwitch {
   height: 100%;
-  width:5rem;
+  width: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,18 +61,17 @@
 }
 
 .WorkerLineGod {
-  height: 42.8rem;
+  height: 42rem;
   overflow: scroll;
 }
 .WorkerLineGod::-webkit-scrollbar {
   display: none;
 }
-.WorkerApprove{
+.WorkerApprove {
   height: 100%;
   width: 7.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgb(220, 220, 220);
-
 }

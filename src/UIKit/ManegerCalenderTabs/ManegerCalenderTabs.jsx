@@ -60,37 +60,37 @@ export default function ManegerCalenderTabs() {
   // Today //
   let today = new Date();
   today.setDate(today.getDate() + 0);
-  let todayday = getDayName(today, "he-IL").split(" ");
+  let todayday = getDayName(today, "he-IL");
 
   // Tomorrow //
   let tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  let tomorrowday = getDayName(tomorrow, "he-IL").split(" ");
+  let tomorrowday = getDayName(tomorrow, "he-IL");
 
   // Three days //
   let three = new Date();
   three.setDate(three.getDate() + 2);
-  let threeday = getDayName(three, "he-IL").split(" ");
+  let threeday = getDayName(three, "he-IL");
 
   // Four days //
   let four = new Date();
   four.setDate(four.getDate() + 3);
-  let fourday = getDayName(four, "he-IL").split(" ");
+  let fourday = getDayName(four, "he-IL");
 
   // Five days //
   let five = new Date();
   five.setDate(five.getDate() + 4);
-  let fiveday = getDayName(five, "he-IL").split(" ");
+  let fiveday = getDayName(five, "he-IL");
 
   // Six days //
   let six = new Date();
   six.setDate(six.getDate() + 5);
-  let sixday = getDayName(six, "he-IL").split(" ");
+  let sixday = getDayName(six, "he-IL")
 
   // Seven days //
   let seven = new Date();
   seven.setDate(seven.getDate() + 6);
-  let sevenday = getDayName(seven, "he-IL").split(" ");
+  let sevenday = getDayName(seven, "he-IL");
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -107,7 +107,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{todayday[0]}</div>
+                <div className="dateName">{todayday}</div>
                 <div className="date">{new Date().getDate()}</div>
               </div>
             }
@@ -116,7 +116,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{tomorrowday[1]}</div>
+                <div className="dateName">{tomorrowday}</div>
                 <div className="date">{new Date().getDate() + 1}</div>
               </div>
             }
@@ -125,7 +125,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{threeday[1]}</div>
+                <div className="dateName">{threeday}</div>
                 <div className="date">{new Date().getDate() + 2}</div>
               </div>
             }
@@ -134,7 +134,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{fourday[1]}</div>
+                <div className="dateName">{fourday}</div>
                 <div className="date">{new Date().getDate() + 3}</div>
               </div>
             }
@@ -143,7 +143,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{fiveday[1]}</div>
+                <div className="dateName">{fiveday}</div>
                 <div className="date">{new Date().getDate() + 4}</div>
               </div>
             }
@@ -152,7 +152,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{sixday[1]}</div>
+                <div className="dateName">{sixday}</div>
                 <div className="date">{new Date().getDate() + 5}</div>
               </div>
             }
@@ -161,7 +161,7 @@ export default function ManegerCalenderTabs() {
           <Tab
             label={
               <div className="day">
-                <div className="dateName">{sevenday[1]}</div>
+                <div className="dateName">{sevenday}</div>
                 <div className="date">{new Date().getDate() + 6}</div>
               </div>
             }
@@ -171,33 +171,38 @@ export default function ManegerCalenderTabs() {
       </Box>
       <TabPanel value={value} index={0}>
         <div className="patientList">
-          {/* {patients.map((patient) => (
-            <div className="patientLine">
-              <div className="patientName">{patient.full_name}</div>
-              <div className="patientTestType">{patient.test_type}</div>
-              <div className="patientTime"> {patient.time}</div>
-            </div>
-          ))} */}
           <PatientsList/>
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item four
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item 5
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Item 6
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={6}>
-        Item 7
+      <div className="patientList">
+          <PatientsList/>
+        </div>
       </TabPanel>
     </Box>
   );
