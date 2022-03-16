@@ -5,10 +5,10 @@ import OrderCheck from "../OrderCheck/OrderCheck";
 import RemoveTestLine from "../RemoveTestLine/RemoveTestLine";
 import AddChild from "../AddChild/AddChild";
 import { Modal } from "react-responsive-modal";
-import Button from "@mui/material/Button";
+import OTP from '../../UIKit/OTP/OTP'
 import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 
-function ModalPop({ variant, open, details, ...props }) {
+function ModalPop({ variant, open, details,stateChange, ...props }) {
   if (variant === "testline") {
     return (
       <div>
@@ -24,15 +24,7 @@ function ModalPop({ variant, open, details, ...props }) {
       <div>
         <Modal open={open} onClose={() => props.closeIt(false)} center>
           <div className="Add">
-            <div className="orderCheckHeader">
-              <p>שלום אורח/ת </p>
-            </div>
             <OrderCheck />
-            <div className="orderCheckBottom">
-              <div className="btn_child">
-            <FloatingButton />
-            </div>
-            </div>
           </div>
         </Modal>
       </div>
@@ -47,20 +39,26 @@ function ModalPop({ variant, open, details, ...props }) {
         </Modal>
       </div>
     );
-  } else  if (variant === "addChild") {
+  } else if (variant === "addChild") {
     return (
       <div>
         <Modal open={open} onClose={() => props.closeIt(false)} center>
           <div className="addChild">
-            <div className="addChildHeader"></div>
-            <div className="addChildContent">
-      <AddChild />
-      </div>
+            <AddChild />
           </div>
         </Modal>
       </div>
     );
-  } else {return ""}
-
+  } else if (variant === "OTPModal") {
+    return (
+      <div>
+        <Modal open={open} onClose={() => props.closeIt(false)} center>
+          <div className="OTPModal">
+            <OTP stateChange={stateChange} />
+          </div>
+        </Modal>
+      </div>
+    );
+  }else{return " No Modal"}
 }
 export default ModalPop;

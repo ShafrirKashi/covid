@@ -17,3 +17,8 @@
 .ManegerCalenderTabs{
     margin-top: 1.3rem;
 }
+.css-heg063-MuiTabs-flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

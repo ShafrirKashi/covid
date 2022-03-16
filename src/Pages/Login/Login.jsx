@@ -7,7 +7,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
+import PopModal from "../../UIKit/PopModal/PopModal";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -22,6 +22,10 @@ const [id, setID] = useState("")
 const [phone, setPhone] = useState("")
 const [idError, setIdError] = useState(false)
 const [phoneError, setPhoneError] = useState(false)
+const [OTP, setOTP] = useState("")
+
+const [open, setOpen] = useState(false);
+const onOpenModal = () => setOpen(true);
 
 
 
@@ -42,8 +46,13 @@ const [phoneError, setPhoneError] = useState(false)
   //   setPhoneError(true)
   // }
 
-  // const handleSubmit = (e) =>{
-  //   e.preventDefault();
+  const href = (e) =>{
+    e.preventDefault();
+    if(OTP === 1111){
+      return (
+        "/main"
+      )
+    }}
 
   //   if(id && phone){
   //     console.log(id, phone)
@@ -81,7 +90,7 @@ const [phoneError, setPhoneError] = useState(false)
                   alignItems: "start",
                 }}
               >
-                  <form noValidate autoComplete="off" >
+                  {/* <form noValidate autoComplete="off" > */}
                 <Input
                   onChange={(e) => setID(e.target.value)}
                   margin="normal"
@@ -131,15 +140,18 @@ const [phoneError, setPhoneError] = useState(false)
                   />
                 </Box>
                 <Button
-                  href="/main"
-                  type="submit"
+                  href={href}
+                  // type="submit"
+                  onClick={onOpenModal}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
                 >
                   התחבר
                 </Button>
-                </form>
+                <PopModal stateChange={setOTP} variant="OTPModal" open={open} closeIt={(open) => setOpen(false)} />
+
+                {/* </form> */}
               </Box>
               <Link padding="20px" href="/registration" variant="body2">
                 {"לא רשום עדין? הרשם עכשיו"}

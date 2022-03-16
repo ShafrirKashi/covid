@@ -7,6 +7,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const options = [
   'התנתק מהמערכת',
+  'הגדרות',
  
 ];
 

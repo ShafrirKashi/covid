@@ -131,28 +131,29 @@
   background-color: rgb(240, 240, 240);
   border-bottom: 1px solid rgb(207, 207, 207);
 }
-.btn_child{
+.btn_child {
   position: relative;
   bottom: 2rem;
 }
-.orderCheckBottom{
+.orderCheckBottom {
   width: 100%;
   height: 4rem;
   background-color: rgb(235, 235, 235);
   display: flex;
   justify-content: center;
 }
-.addChildContent{
+.addChild{
+  width: 80vw;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 22rem;
-  height: 30rem;
 }
-.addChildHeader{
-  width: 100%;
-  height: 4rem;
-  background-color: rgb(240, 240, 240);
-  border-bottom: 1px solid rgb(207, 207, 207);
-
+.OTPModal{
+  width: 23rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: ltr
 }

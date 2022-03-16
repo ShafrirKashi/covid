@@ -39,7 +39,6 @@ export default function BasicTextFields({onChange, focus}) {
                 noValidate
                 autoComplete="off"
               >
-                <form>
           <TextField
            id="filled-basic" 
            label="חיפוש..." 
@@ -48,7 +47,6 @@ export default function BasicTextFields({onChange, focus}) {
            type= "string"
            autoFocus={true}
            />
-           </form>
               </Box>
             </div>
           </ThemeProvider>
