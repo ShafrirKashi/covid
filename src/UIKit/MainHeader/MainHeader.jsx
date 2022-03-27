@@ -17,21 +17,22 @@ function MainHeader({ onChange, focus }) {
         <div className="SearchMainWrapper">
           {state === false ? (
             <div className="MainHeaderDefault">
-              <div className="MainHeaderLogo">
-                <img src={Biduk} alt="" />
-                </div>
-              <div className="MainLogos">
-                <div className="dropDown">
-                  <Dropdown />
-                  <span className="MainLogoText"> דף בדיקות אישי</span>
-                </div>
-                <div className="shawrma">
-                  <img className="BellIcon" src={Bell} alt="" />
-                  <div onClick={() => setState(true)} className="MainRightLogo">
-                    <img className="MagIcon" src={Mag} alt="" />
+              <div className="MainHeaderMain">
+                  <div className="dropDown">
+                    <Dropdown />
                   </div>
-                </div>
+                  <img src={Biduk} alt="" />
+                  <div className="MainHeaderIcons">
+                    <img className="BellIcon" src={Bell} alt="" />
+                    <div
+                      onClick={() => setState(true)}
+                      className="MainRightLogo"
+                    >
+                      <img className="MagIcon" src={Mag} alt="" />
+                    </div>
+                  </div>
               </div>
+              <span className="MainLogoText">רשימת הבדיקות</span>
             </div>
           ) : null}
 
@@ -40,9 +41,8 @@ function MainHeader({ onChange, focus }) {
               <div onClick={() => setState(false)} className="ArrowIcon">
                 <ArrowBackIcon />
               </div>
-              
+
               <Search onChange={(value) => onChange(value)} />
-              
             </div>
           ) : null}
         </div>

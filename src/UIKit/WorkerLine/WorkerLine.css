@@ -75,3 +75,9 @@
   align-items: center;
   border-bottom: 1px solid rgb(220, 220, 220);
 }
+.WorkerPos{
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

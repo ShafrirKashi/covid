@@ -33,12 +33,12 @@
   position: relative;
   border-bottom: 1px solid rgb(206, 206, 206);
 }
-.MainHeaderLogo {
+.MainHeaderMain {
+  width: 93%;
+  height: 4rem;
   display: flex;
-  justify-content: center;
-
-  width: 100%;
-  margin-top: 8px;
+  align-items: center;
+  justify-content: space-between;
 }
 .MainLogos {
   width: 93%;
@@ -51,18 +51,19 @@
   font-family: Rubik;
   font-size: 1.3rem;
   position: relative;
-  bottom: 1px;
-  right: 14px;
+  bottom: 1rem;
+  right: -2rem;
 }
-.shawrma {
-  /* position: relative;
-  bottom: 2rem; */
+.MainHeaderIcons {
   display: flex;
   width: 5rem;
   justify-content: space-between;
 }
 .dropDown {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .LogoMainPage {
   width: 10rem;

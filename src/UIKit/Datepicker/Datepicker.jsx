@@ -52,7 +52,7 @@ function Datepicker(props) {
       <Box
         component="form"
         sx={{
-          "& > :not(style)": {mr:0.9 ,mt: 5,mb:2, width: "30ch" },
+          "& > :not(style)": { mr: 0.9, mt: 5, mb: 2, width: "30ch" },
         }}
         noValidate
         autoComplete="off"

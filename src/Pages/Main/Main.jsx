@@ -16,7 +16,7 @@ const dataToShow = [
   {
     name: "רונן כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "2/4/2022",
+    date: 1649322772617,
     time: "12:40",
     status: "ממתין",
     number: "324153",
@@ -25,7 +25,7 @@ const dataToShow = [
   {
     name: "רונן כץ",
     test: <img className="testLogo" src={Antigen} alt="" />,
-    date: "3/7/2021",
+    date: 1657322772617,
     time: "11:20",
     status: "מעבדה",
     number: "214252",
@@ -34,7 +34,7 @@ const dataToShow = [
   {
     name: "עומר כץ",
     test: <img className="testLogo" src={Mosdi} alt="" />,
-    date: "17/4/2023",
+    date: 1648322772617,
     time: "08:45",
     status: "ממתין",
     number: "903456",
@@ -43,7 +43,7 @@ const dataToShow = [
   {
     name: "דניאל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "22/5/2022",
+    date: 1645822772617,
     time: "18:10",
     status: "ממתין",
     number: "185256",
@@ -52,7 +52,7 @@ const dataToShow = [
   {
     name: "רונן כץ",
     test: <img className="testLogo" src={Mosdi} alt="" />,
-    date: "12/8/2022",
+    date: 1641722772617,
     time: "12:30",
     status: "תחנת בדיקה",
     number: "853941",
@@ -61,7 +61,7 @@ const dataToShow = [
   {
     name: "רונן כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "21/7/2022",
+    date: 1648022772617,
     time: "13:20",
     status: "ממתין",
     number: "678534",
@@ -70,7 +70,7 @@ const dataToShow = [
   {
     name: "יעל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "12/5/2022",
+    date: 1648822772617,
     time: "17:11",
     status: "תחנת בדיקה",
     number: "853632",
@@ -79,7 +79,7 @@ const dataToShow = [
   {
     name: "יעל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "12/5/2022",
+    date: 1647322772617,
     time: "17:11",
     status: "תחנת בדיקה",
     number: "853632",
@@ -88,7 +88,7 @@ const dataToShow = [
   {
     name: "יעל כץ",
     test: <img className="testLogo" src={PCR} alt="" />,
-    date: "12/5/2022",
+    date: 1699322772617,
     time: "17:11",
     status: "תחנת בדיקה",
     number: "853632",

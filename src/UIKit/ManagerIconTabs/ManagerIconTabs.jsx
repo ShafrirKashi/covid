@@ -11,9 +11,11 @@ import Inventory2OutlinedIcon from "@mui/icons-material/Inventory2Outlined";
 import FactCheckOutlinedIcon from "@mui/icons-material/FactCheckOutlined";
 import Dashboard from "../../Pages/Dashboard/Dashboard";
 import Staff from "../../Pages/Staff/Staff";
+import Table from "../../UIKit/Table/Table";
+
 import ManegerCalenderTabs from "../../UIKit/ManegerCalenderTabs/ManegerCalenderTabs";
 import "./ManagerIconTabs.css";
-import * as moment from "moment";
+import moment from "moment";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,7 +75,7 @@ export default function BasicTabs() {
           Item 1
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item 2
+          <Table />
         </TabPanel>
         <TabPanel value={value} index={2}>
           <Dashboard />

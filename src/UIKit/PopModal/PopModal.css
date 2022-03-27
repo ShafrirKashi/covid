@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 900;
 }
 
 .react-responsive-modal-overlay {
@@ -113,7 +113,7 @@
 }
 
 .Add {
-  width: 23rem;
+  width: 24rem;
   height: 43rem;
   display: flex;
   flex-direction: column;

@@ -72,6 +72,52 @@ export default function BasicSelect({onChange, variant, label}) {
       </Box>
     </CacheProvider>
     );
-  }else{return ""}
+  }else if(variant === "station"){
+    return (
+      <CacheProvider value={cacheRtl}>
+      <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={city}
+            label="קופת חולים"
+            onChange={handleChangeCity}
+            variant="outlined"
+          >
+            <MenuItem value={"RishonLezion"}>ראשון לציון</MenuItem>
+            <MenuItem value={"Haifa"}>חיפה</MenuItem>
+            <MenuItem value={"TLV"}>תל אביב</MenuItem>
+            <MenuItem value={"Jerusalem"}>ירושלים</MenuItem>
+            <MenuItem value={"ashdod"}>אשדוד</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+    </CacheProvider>
+    );
+  }else if(variant === "testType"){
+    return (
+      <CacheProvider value={cacheRtl}>
+      <Box sx={{mt:1.5, minWidth: 274, paddingLeft: 1 }}>
+        <FormControl fullWidth>
+          <InputLabel id="demo-simple-select-label">{label}</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={city}
+            label="קופת חולים"
+            onChange={handleChangeCity}
+            variant="outlined"
+          >
+            <MenuItem value={"PCR"}>PCR</MenuItem>
+            <MenuItem value={"Mosdi"}>אנטיגן מוסדי</MenuItem>
+            <MenuItem value={"Antigen"}>אנטיגן ביתי</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+    </CacheProvider>
+    );
+  }else {return ""}
  
 }

@@ -1,55 +1,37 @@
-.css-14yr603-MuiStepContent-root{
-    border-left: 0px !important;
-    border-right: 1px solid  #bdbdbd !important;
-    margin-right: 20px !important;
-}
-.MMuiStepper-root.MuiStepper-vertical.MuiStepper-alternativeLabel.css-11r6j1z-MuiStepper-root{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Sele{
-    width: 20rem;
-    height: 5rem;
-}
-.VerticalLinearStepper{
-    display: flex !important;
-    justify-content: center  !important;;
-    align-items: center !important;;
-    padding-top: 5rem;
-    flex-direction: column;
-    /* background-color: green; */
-}
-.OrderCheck__Btn{
-    display: flex !important;;
-    justify-content: center !important;;
-    align-items:flex-start !important;
-    padding-bottom: 5rem;
-}
-.css-11r6j1z-MuiStepper-root{
-    align-items: flex-start !important; 
-    width: 20rem !important;
-    /* margin-left: 30px !important; */
-}
-.css-8t49rw-MuiStepConnector-line{
-    border-left: 0px !important;
-    border-right: 1px solid  #bdbdbd !important;
-    margin-right: 20px !important;
-}
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
-    color: rgb(0, 170, 0) !important;
-}
-.css-14sza3e-MuiStepLabel-root.MuiStepLabel-alternativeLabel{
-    align-items: flex-start;
-}
-.MuiStepLabel-label{
-    display: flex !important;
-    justify-content: flex-start!important;
-    margin-right: 10px !important;
+.OrderCheckWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  /* height: 100%; */
 }
 .orderCheckHeader {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+}
+.OrderHeaderText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h3,
+h4 {
+  margin: 0;
+}
+.formSpace {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: green;
+
+}
+.react-responsive-modal-container{
+    overflow: hidden !important; 
+}
