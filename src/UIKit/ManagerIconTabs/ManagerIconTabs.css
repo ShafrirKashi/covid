@@ -31,5 +31,10 @@
 
 } */
 .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
-    min-width: 20% !important;
+    /* min-width: 20% !important; */
+}
+.css-1anid1y{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
