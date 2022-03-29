@@ -45,7 +45,6 @@ export default function BasicTextFields({onChange, focus}) {
            variant="outlined" 
            onChange={handleEnter}
            type= "string"
-           autoFocus={true}
            />
               </Box>
             </div>

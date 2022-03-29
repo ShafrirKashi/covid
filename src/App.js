@@ -8,8 +8,6 @@ import Manager from './Pages/Manager/Manager'
 import LoginAdmin from './Pages/LoginAdmin/LoginAdmin'
 import { Routes, Route } from "react-router-dom"
 import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Footer from './Components/Footer/Footer'
 
 
 function App() {

@@ -76,7 +76,6 @@ function LoginWorker() {
                   label="תעודת זהות"
                   name="ID"
                   autoComplete="ID"
-                  autoFocus
                 
                 />
                 <Input

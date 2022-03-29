@@ -77,7 +77,6 @@ const onOpenModal = () => setOpen(true);
                   label="תעודת זהות"
                   name="ID"
                   autoComplete="ID"
-                  autoFocus
                 />
                 <Input
                 // onChange={(e) => setPhone(e.target.value)}
