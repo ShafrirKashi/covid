@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import cityList from "../../APIcalls/city.json";
+import './Autocomplete.css'
 
 export default function ComboBox({ variant }) {
   const [city, setCity] = useState("");

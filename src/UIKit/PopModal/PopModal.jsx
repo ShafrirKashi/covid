@@ -59,6 +59,6 @@ function ModalPop({ variant, open, details,stateChange, ...props }) {
         </Modal>
       </div>
     );
-  }else{return " No Modal"}
+  }else{return ""}
 }
 export default ModalPop;

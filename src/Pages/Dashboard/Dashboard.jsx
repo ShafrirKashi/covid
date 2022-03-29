@@ -69,7 +69,7 @@ function Manager() {
       </div>
 
       <div className="Packages">
-        <Table />
+        <Table variant="dashboard" />
       </div>
     </div>
   );

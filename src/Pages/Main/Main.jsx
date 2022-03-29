@@ -3,9 +3,7 @@ import MainHeader from "../../UIKit/MainHeader/MainHeader";
 import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 import TestLine from "../../UIKit/TestLine/TestLine";
 import PopModal from "../../UIKit/PopModal/PopModal";
-import Tabs from "../../UIKit/Tabs/Tabs";
 import QRcode from "../../Assets/img/qr.png";
-import barcode from "../../Assets/img/barcode.png";
 import PCR from "../../Assets/img/pcrLogo.png";
 import Antigen from "../../Assets/img/antigenLogo.png";
 import Mosdi from "../../Assets/img/mosdiLogo.png";
@@ -109,7 +107,6 @@ function Main() {
       </div>
       <div className="FloatingButton">
         <FloatingButton variant="add" />
-        <PopModal />
       </div>
     </div>
   );
