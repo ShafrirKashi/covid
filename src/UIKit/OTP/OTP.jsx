@@ -29,7 +29,7 @@ function OTP({ stateChange }) {
         numInputs={4}
         separator={<span> - </span>}
         isInputNum
-        shouldAutoFocus
+        // shouldAutoFocus
         inputStyle={inputStyle}
       />
     </div>
