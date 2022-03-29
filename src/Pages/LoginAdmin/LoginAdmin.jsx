@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
@@ -7,7 +7,6 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -18,37 +17,11 @@ const theme = createTheme();
 
 function LoginAdmin() {
 
-const [id, setID] = useState("")
-const [phone, setPhone] = useState("")
-const [idError, setIdError] = useState(false)
-const [phoneError, setPhoneError] = useState(false)
+// const [id, setID] = useState("")
+// const [phone, setPhone] = useState("")
+// const [idError, setIdError] = useState(false)
+// const [phoneError, setPhoneError] = useState(false)
 
-
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   // eslint-disable-next-line no-console
-  //   console.log({
-  //     email: data.get("email"),
-  //     password: data.get("password"),
-  //   });
-  // };
-  
-  // if(id ===""){
-  //   setIdError(true)
-  // }
-  // if(phone ===""){
-  //   setPhoneError(true)
-  // }
-
-  // const handleSubmit = (e) =>{
-  //   e.preventDefault();
-
-  //   if(id && phone){
-  //     console.log(id, phone)
-  //   }
-  // }
 
   return (
     <div className="login">
@@ -72,18 +45,17 @@ const [phoneError, setPhoneError] = useState(false)
             
               <Box
                 component="form"
-                // onSubmit={handleSubmit}
                 noValidate
                 sx={{
                   mt: 2,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "start",
+                  alignItems: "flex-start",
                 }}
               >
                   <form noValidate autoComplete="off" >
                 <Input
-                  onChange={(e) => setID(e.target.value)}
+                  // onChange={(e) => setID(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -92,10 +64,9 @@ const [phoneError, setPhoneError] = useState(false)
                   name="ID"
                   autoComplete="ID"
                   autoFocus
-                  error={idError}
                 />
                 <Input
-                onChange={(e) => setPhone(e.target.value)}
+                // onChange={(e) => setPhone(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -104,7 +75,6 @@ const [phoneError, setPhoneError] = useState(false)
                   type="password"
                   id="password"
                   autoComplete="current-password"
-                  error={phoneError}
 
                 />
                 
@@ -118,7 +88,7 @@ const [phoneError, setPhoneError] = useState(false)
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "start",
+                    justifyContent: "flex-start",
                     direction: "column",
                     width: "100%",
                     marginTop: 3,

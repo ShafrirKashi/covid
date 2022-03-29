@@ -2,12 +2,7 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -17,15 +12,7 @@ import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 const theme = createTheme();
 
 function Login() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    // console.log({
-    //   email: data.get("email"),
-    //   password: data.get("password"),
-    // });
-  };
+
 
   return (
     <div className="login">
@@ -48,13 +35,13 @@ function Login() {
               </Typography>
               <Box
                 component="form"
-                onSubmit={handleSubmit}
+                // onSubmit={handleSubmit}
                 noValidate
                 sx={{
                   mt: 2,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "start",
+                  alignItems: "flex-start",
                 }}
               >
                 <Input
@@ -81,7 +68,7 @@ function Login() {
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "start",
+                    justifyContent: "flex-start",
                     direction: "column",
                     width: "100%",
                     marginTop: 3,

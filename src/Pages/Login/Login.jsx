@@ -18,33 +18,15 @@ const theme = createTheme();
 
 function Login() {
 
-const [id, setID] = useState("")
-const [phone, setPhone] = useState("")
-const [idError, setIdError] = useState(false)
-const [phoneError, setPhoneError] = useState(false)
+// const [id, setID] = useState("")
+// const [phone, setPhone] = useState("")
+// const [idError, setIdError] = useState(false)
+// const [phoneError, setPhoneError] = useState(false)
 const [OTP, setOTP] = useState("")
 
 const [open, setOpen] = useState(false);
 const onOpenModal = () => setOpen(true);
 
-
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   // eslint-disable-next-line no-console
-  //   console.log({
-  //     email: data.get("email"),
-  //     password: data.get("password"),
-  //   });
-  // };
-  
-  // if(id ===""){
-  //   setIdError(true)
-  // }
-  // if(phone ===""){
-  //   setPhoneError(true)
-  // }
 
   const href = (e) =>{
     e.preventDefault();
@@ -54,10 +36,6 @@ const onOpenModal = () => setOpen(true);
       )
     }}
 
-  //   if(id && phone){
-  //     console.log(id, phone)
-  //   }
-  // }
 
   return (
     <div className="login">
@@ -81,18 +59,17 @@ const onOpenModal = () => setOpen(true);
             
               <Box
                 component="form"
-                // onSubmit={handleSubmit}
                 noValidate
                 sx={{
                   mt: 2,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "start",
+                  alignItems: "flex-start",
                 }}
               >
                   {/* <form noValidate autoComplete="off" > */}
                 <Input
-                  onChange={(e) => setID(e.target.value)}
+                  // onChange={(e) => setID(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -101,10 +78,9 @@ const onOpenModal = () => setOpen(true);
                   name="ID"
                   autoComplete="ID"
                   autoFocus
-                  error={idError}
                 />
                 <Input
-                onChange={(e) => setPhone(e.target.value)}
+                // onChange={(e) => setPhone(e.target.value)}
                   margin="normal"
                   required
                   fullWidth
@@ -113,7 +89,6 @@ const onOpenModal = () => setOpen(true);
                   type="password"
                   id="password"
                   autoComplete="current-password"
-                  error={phoneError}
 
                 />
                 
@@ -127,7 +102,7 @@ const onOpenModal = () => setOpen(true);
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "start",
+                    justifyContent: "flex-start",
                     direction: "column",
                     width: "100%",
                     marginTop: 3,

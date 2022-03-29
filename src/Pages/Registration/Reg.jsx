@@ -57,7 +57,7 @@ function Login({ handleClick }) {
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "start",
+                  alignItems: "flex-start",
                   justifyContent: "space-between",
                 }}
               >

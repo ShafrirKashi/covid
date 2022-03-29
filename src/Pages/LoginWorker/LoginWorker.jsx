@@ -4,10 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -66,7 +63,7 @@ function LoginWorker() {
                   mt: 2,
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "start",
+                  alignItems: "flex-start",
                 }}
               >
                 <Input
@@ -95,7 +92,7 @@ function LoginWorker() {
                 <Box
                   sx={{
                     display: "flex",
-                    justifyContent: "start",
+                    justifyContent: "flex-start",
                     direction: "column",
                     width: "100%",
                     marginTop: 3,
