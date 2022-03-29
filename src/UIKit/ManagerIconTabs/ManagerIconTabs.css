@@ -24,8 +24,10 @@
     padding: 0;
 }
 .css-y0fr9s-MuiButtonBase-root-MuiTab-root{
-    min-width: 60px !important;
+    /* min-width: 60px !important; */
+    width: auto !important;
 }
 .css-1qtp7a4{
-    min-width: 60px !important;
+    /* min-width: 60px !important; */
+    width: auto !important;
 }
