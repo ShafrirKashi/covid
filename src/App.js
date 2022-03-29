@@ -18,7 +18,7 @@ function App() {
       
       {/* <Navbar /> */}
       <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/admin" element={<LoginAdmin />} />
       <Route path="/login2work" element={<LoginWorker />} />
       <Route path="/manager" element={<Manager />} />
