@@ -106,7 +106,7 @@ export default function BasicTabs() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
-          variant="fullWidth"
+          // variant="fullWidth"
 
         >
           <Tab icon={<FactCheckOutlinedIcon />} {...a11yProps(2)} />
