@@ -5,7 +5,7 @@ function Checkbox({text}) {
   return (
     <div className="checkboxInput">
       <div className="checkboxWrapper">
-        <p>{text}</p>
+        <p className="checkboxText">{text}</p>
         <input className="checkbox" type="checkbox" />
         </div>
      </div>

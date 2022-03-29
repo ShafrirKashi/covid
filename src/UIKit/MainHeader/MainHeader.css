@@ -1,0 +1,97 @@
+.MainHeader {
+  /* background-image: url("../../Assets/img/background.jpg"); */
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: opacity(0.1);
+  width: 25.7rem !important;
+  height: 5rem !important;
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(195, 203, 233);
+  border-bottom: 1px solid rgb(184, 184, 184);
+}
+.SearchMainWrapper {
+  width: 25.7rem;
+  display: flex;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(247, 247, 247);
+}
+.MainHeaderDefault {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: rgb(0, 109, 252); */
+  position: relative;
+  border-bottom: 1px solid rgb(206, 206, 206);
+}
+.MainHeaderMain {
+  width: 93%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainLogos {
+  width: 93%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.MainLogoText {
+  font-family: Rubik;
+  font-size: 1.3rem;
+  position: relative;
+  bottom: 1rem;
+  right: -2rem;
+}
+.MainHeaderIcons {
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.dropDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.LogoMainPage {
+  width: 10rem;
+}
+.BellIcon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+.MagIcon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+.muirtl-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  width: 22.3rem !important;
+}
+
+.ArrowIcon {
+  position: absolute;
+  right: 21.5rem;
+  bottom: 16px;
+  z-index: 200;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

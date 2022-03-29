@@ -1,50 +1,63 @@
-import React from "react";
-import "./Input.css";
+import React, {useState} from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import TextField from "@mui/material/TextField";
+import rtlPlugin from "stylis-plugin-rtl";
+import { prefixer } from "stylis";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import Box from "@mui/material/Box";
+import './Input.css'
 
-function Input({
-  onInput,
-  placeholder,
-  type,
+const theme = createTheme({
+  direction: "rtl", // Both here and <body dir="rtl">
+});
+// Create rtl cache
+const cacheRtl = createCache({
+  key: "muirtl",
+  stylisPlugins: [prefixer, rtlPlugin],
+});
+
+
+export default function Direction({
+  InputLabelProps,
   label,
-  variant,
-  maxLength,
-  minLength,
-  min,
-  max,
-  name
+  margin,
+  type,
+  id,
+  autoComplete,
+  onChange,
+  error
 }) {
-  if (variant === "white") {
-    return (
-      <div className="Input">
-        <label className="labelDark">{label}</label>
-        <input
-          onInput={onInput}
-          placeholder={placeholder}
-          type={type}
-          maxLength={maxLength}
-          minLength={minLength}
-          max={max}
-          min={min}
-          name={name}
-        ></input>
-      </div>
-    );
-  } else {
-    return (
-      <div className="Input">
-        <label className="labelLight">{label}</label>
-        <input
-          onInput={onInput}
-          placeholder={placeholder}
-          type={type}
-          maxLength={maxLength}
-          minLength={minLength}
-          max={max}
-          min={min}
-        ></input>
-      </div>
-    );
-  }
-}
 
-export default Input;
+  const [value, setValue] = useState('')
+
+  return (
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <div dir="rtl">
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { ml:1,mt: 3, width: "30ch" },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              onChange={onChange}
+              margin={margin}
+              required
+              fullWidth
+              type={type}
+              id={id}
+              autoComplete={autoComplete}
+              label={label}
+              variant="standard"
+              error={error}
+            />
+          </Box>
+        </div>
+      </ThemeProvider>
+    </CacheProvider>
+  );
+}

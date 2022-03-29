@@ -1,0 +1,31 @@
+.Main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(247, 247, 247);
+  overflow: hidden;
+}
+
+.testLine {
+  width: 100vw;
+  height: 35.5rem;
+}
+.FloatingButton {
+  position: relative;
+  right: 8rem;
+}
+.QR__Img {
+  width: 100%;
+  height: 100%;
+}
+
+.testLogo {
+  width: 3rem;
+}
+.Main::-webkit-scrollbar {
+  display: none;
+}

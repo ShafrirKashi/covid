@@ -1,0 +1,11 @@
+.dots {
+    width: 1.5rem;
+  }
+  .dotsWrapper {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    cursor: pointer;
+  }

@@ -1,88 +1,104 @@
 import React, { useState } from "react";
-import "./Reg.css";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
-import Button from "../../UIKit/Button/Button";
 import Select from "../../UIKit/Select/Select";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "./Reg.css";
+import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 import Datepicker from "../../UIKit/Datepicker/Datepicker";
-import ReCAPTCHA from "../../UIKit/ReCAPTCHA/ReCAPTCHA";
-import {serverReq, dateFormat} from "../../ServerRequest"
 
-function Registration() {
-  const [id, setId] = useState("");
-  const [bday, setBday] = useState("");
-  const [phone, setPhone] = useState("");
+const theme = createTheme();
 
-  async function regReq(e) {
-    try {
-        e.preventDefault()
-        const values = Object.values(e.target)
-            .reduce((acc, input) => !input.name ? acc : ({
-                ...acc,
-                [input.name]: input.type == 'checkbox' ? input.checked : input.value
-            }), {}
-            )
-  
-        const body = {
-          phone: values.phone,
-          israeliID: values.israeliID,
-          birthdayDate: {
-            day: 5,
-            month: 4,
-            year: 2000
-          },
-          HMO: values.HMO
-        }
+function Login({ handleClick }) {
+  const [IDvalue, setIDvalue] = useState("");
+  const [Phonevalue, setPhonevalue] = useState("");
+  const [HMOvalue, setHMOvalue] = useState("");
+  const [Datevalue, setDatevalue] = useState("");
 
-        console.log(body);
-   
-        const res = await serverReq('put', '/register', body)
+  console.log(IDvalue, Phonevalue, HMOvalue, Datevalue);
 
-        console.log(res.data);
-        
-    } catch (error) {
-        console.log(error);
-          
-    }
-
-}
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+  };
 
   return (
     <div className="login">
-      <div className="loginWrapperReg">
-        <div className="logoWrapperReg">
-          <p>הרשמה למערכת</p>
-        </div>
-        <form className="inputsWrapperReg" onSubmit={(e) => regReq(e)}>
-          <Input
-            variant="white"
-            label="מספר זהות"
-            type="text"
-            maxlength="9"
-            onInput={(e) => setId(e.target.value)}
-            name="israeliID"
-          />
-          <Datepicker
-            setStartDate={(date) => setBday(date)}
-          />
-          <Input
-            variant="white"
-            label="מספר טלפון נייד"
-            type="text"
-            maxlength="10"
-            minlength="10"
-            onInput={(e) => setPhone(e.target.value)}
-            name="phone"
-          />
-          <Select name="HMO"/>
-          <div className="recaptcha">
-            <ReCAPTCHA />
-          </div>
-          <Button className="btnSignReg" text="הרשמה" />
-        </form>
+      <div className="loginWrapper">
+        <ThemeProvider theme={theme}>
+          <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <Box
+              sx={{
+                marginTop: 4,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                height: "100%",
+              }}
+            >
+              <img className="Logo_Login" src={BidukLogo} alt="" />
+              <Typography component="h1" variant="h5">
+                הרשמה
+              </Typography>
+
+              <Box
+                component="form"
+                onSubmit={handleSubmit}
+                noValidate
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Input
+                  onChange={(e) => setIDvalue(e.target.value)}
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="ID"
+                  label="תעודת זהות"
+                  name="ID"
+                  autoComplete="ID"
+                  autoFocus
+                />
+                <Input
+                  onChange={(e) => setPhonevalue(e.target.value)}
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="phone"
+                  label="טלפון"
+                  type="phone"
+                  id="phone"
+                />
+                <Datepicker getDate={(date) => setDatevalue(date)} />
+                <Select label="קופת חולים" variant={"HMO"} onChange={(e) => setHMOvalue(e.target.value)} />
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  sx={{ mt: 6, mb: 2 }}
+                >
+                  הרשם
+                </Button>
+              </Box>
+            </Box>
+          </Container>
+        </ThemeProvider>
       </div>
     </div>
   );
 }
 
-export default Registration;
+export default Login;

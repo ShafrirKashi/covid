@@ -6,15 +6,11 @@
     font-weight: bold;
 }
 .Select{
-    width: 20.8rem;
-    height: 2.5rem;
-    text-align: right;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    margin-top: 10px;
+
+    margin-top: 105px;
 
 }
+
 @media screen and (max-width: 718px) {
 
 .Select{

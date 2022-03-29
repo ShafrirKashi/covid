@@ -1,0 +1,83 @@
+.WorkerLine {
+  width: 100vw;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Rubik";
+  font-size: 15px;
+}
+.WorkerPageHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+.WorkerLineHeader {
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Rubik";
+  font-size: 1.2rem;
+  position:static;
+  border-bottom: 1px solid rgb(214, 214, 214);
+
+}
+.WorkerName {
+  height: 100%;
+  width: 8rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 15px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.WorkerOccupation {
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.WorkerNum {
+  height: 100%;
+  width: 7.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.approveSwitch {
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.WorkerLineGod {
+  height: 42rem;
+  overflow: scroll;
+}
+.WorkerLineGod::-webkit-scrollbar {
+  display: none;
+}
+.WorkerApprove {
+  height: 100%;
+  width: 7.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.WorkerPos{
+  width: 5.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

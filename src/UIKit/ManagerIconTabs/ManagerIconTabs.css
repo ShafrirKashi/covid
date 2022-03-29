@@ -1,0 +1,24 @@
+.css-12m4v16 {
+    background-color: rgb(230, 238, 243);
+}
+.css-1ujnqem-MuiTabs-root{
+    background-color: rgb(230, 238, 243);
+}
+.css-jpln7h-MuiTabs-scroller{
+    width: 100vw !important;
+}
+.ManagerCalenderMain{
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ManegerCalenderTabs{
+    margin-top: 1.3rem;
+}
+.css-heg063-MuiTabs-flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
