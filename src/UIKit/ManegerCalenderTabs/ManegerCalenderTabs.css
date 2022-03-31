@@ -1,4 +1,4 @@
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.css-1q2h7u5{
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root{
     min-width:  14.28% !important;
     padding: 0 !important;
     min-height: 80px !important;
@@ -7,6 +7,16 @@
     align-items: center !important; 
     font-family: Rubik !important;
     white-space: nowrap !important;
+}
+.css-1q2h7u5{
+  min-width:  14.28% !important;
+  padding: 0 !important;
+  min-height: 80px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important; 
+  font-family: Rubik !important;
+  white-space: nowrap !important;
 }
 .calenderMain {
     width: 100vw;
