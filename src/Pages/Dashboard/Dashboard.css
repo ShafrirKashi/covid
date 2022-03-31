@@ -1,4 +1,4 @@
-.ManagerMainWrapper{
+.ManagerMainWrapper {
   height: 93%;
   width: 100%;
   display: flex;
@@ -7,8 +7,8 @@
   align-items: center;
 }
 .MaganerTop {
-  height: 5rem;
-  width: 97%;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +23,6 @@
   padding: 8px;
   border-bottom: 1px solid rgb(241, 241, 241);
   background-color: white;
-  /* max-width: 20rem; */
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 0px 10px 5px rgba(146, 146, 146, 0.25);
 }
@@ -105,13 +104,14 @@
 .Packages {
   background-color: rgb(255, 255, 255);
   width: 100%;
-  height: 100%;
+  height: 20.7rem;
   display: flex;
-  justify-content: center;
+  margin-top: 15px;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: green;
   border: 1px solid rgb(241, 241, 241);
-  border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0px 0px 10px 2px rgba(146, 146, 146, 0.25);
 }
 .css-imwlvt {
@@ -120,7 +120,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .ManagerBottom {
   width: 100%;
