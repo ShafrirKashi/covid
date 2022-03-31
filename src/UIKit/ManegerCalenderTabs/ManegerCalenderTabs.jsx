@@ -98,7 +98,8 @@ export default function ManegerCalenderTabs() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider"}}>
+        <div className="calenderButtons">
         <Tabs
           value={value}
           onChange={handleChange}
@@ -168,6 +169,7 @@ export default function ManegerCalenderTabs() {
             {...a11yProps(0)}
           ></Tab>
         </Tabs>
+        </div>
       </Box>
       <TabPanel value={value} index={0}>
         <div className="patientList">
