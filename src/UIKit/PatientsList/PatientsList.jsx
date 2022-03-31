@@ -7,7 +7,7 @@ const columns = [
   {
     field: 'full_name',
     headerName: 'שם',
-    width: 200,
+    width: 160,
     editable: true,
   },
   {
