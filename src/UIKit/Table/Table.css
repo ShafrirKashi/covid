@@ -4,22 +4,23 @@
   font-family: Rubik !important;
   white-space: nowrap !important;
 }
-.css-1vdvcim-MuiTableCell-root{
+.css-1vdvcim-MuiTableCell-root {
   text-align: center !important;
   font-weight: bold !important;
   font-family: Rubik !important;
   padding: 1px 9px !important;
 }
-.css-41abqd-MuiTableContainer-root{
-overflow-x:scroll !important;
+.css-41abqd-MuiTableContainer-root {
+  overflow-x: scroll !important;
+  height: 18rem !important;
 }
-.css-1n4mg90.MuiTableCell-head{
+.css-1n4mg90.MuiTableCell-head {
   text-align: center !important;
   font-weight: bold !important;
   font-family: Rubik !important;
   padding: 1px 9px !important;
 }
-.css-1byhffn{
+.css-1byhffn {
   text-align: center !important;
   padding: 10px 0px !important;
   font-family: Rubik !important;

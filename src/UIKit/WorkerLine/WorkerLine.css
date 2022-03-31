@@ -22,9 +22,8 @@
   align-items: center;
   font-family: "Rubik";
   font-size: 1.2rem;
-  position:static;
+  position: static;
   border-bottom: 1px solid rgb(214, 214, 214);
-
 }
 .WorkerName {
   height: 100%;
@@ -32,8 +31,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-right: 15px;
-  border-bottom: 1px solid rgb(220, 220, 220);
+  padding-right: 10px;
 }
 .WorkerOccupation {
   height: 100%;
@@ -41,7 +39,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(220, 220, 220);
 }
 .WorkerNum {
   height: 100%;
@@ -49,7 +46,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(220, 220, 220);
 }
 .approveSwitch {
   height: 100%;
@@ -57,9 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(220, 220, 220);
 }
-
 .WorkerLineGod {
   height: 42rem;
   overflow: scroll;
@@ -73,11 +67,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgb(220, 220, 220);
 }
-.WorkerPos{
-  width: 5.5rem;
+.WorkerPos {
+  height: 100%;
+  width: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
