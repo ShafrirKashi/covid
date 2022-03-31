@@ -1,10 +1,10 @@
-.css-ry466g-MuiTableCell-root {
+.css-ry466g-MuiTableCell-root.MuiTableCell-body {
   text-align: center !important;
   padding: 10px 0px !important;
   font-family: Rubik !important;
   white-space: nowrap !important;
 }
-.css-1vdvcim-MuiTableCell-root {
+.css-1vdvcim-MuiTableCell-root.MuiTableCell-head{
   text-align: center !important;
   font-weight: bold !important;
   font-family: Rubik !important;
