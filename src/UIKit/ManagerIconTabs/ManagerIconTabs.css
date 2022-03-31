@@ -29,9 +29,6 @@
     align-items: center;
     padding: 0;
 }
-.css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
-    /* min-width: 20% !important; */
-}
 .css-1anid1y{
     display: flex !important;
     justify-content: center !important;
@@ -44,10 +41,10 @@
     width: 100% !important;
 }
 .css-nt05bc{
-    min-width: 77px !important;
+    min-width: 70px !important;
 }
 .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
-    min-width: 77px !important;
+    min-width: 70px !important;
 }
 .dashboardPanel{
     height: 100%;
