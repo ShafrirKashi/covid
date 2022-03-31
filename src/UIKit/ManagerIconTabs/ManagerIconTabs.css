@@ -23,13 +23,6 @@
     align-items: center;
     padding: 0;
 }
-/* .css-y0fr9s-MuiButtonBase-root-MuiTab-root{
-    min-width: 20% !important;
-}
-.css-1qtp7a4{
-    min-width: 20% !important;
-
-} */
 .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
     /* min-width: 20% !important; */
 }
@@ -49,4 +42,12 @@
 }
 .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
     min-width: 77px !important;
+}
+.dashboardPanel{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

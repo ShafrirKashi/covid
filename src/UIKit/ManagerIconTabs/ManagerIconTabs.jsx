@@ -77,7 +77,7 @@ export default function BasicTabs() {
         <TabPanel value={value} index={1}>
           <Table variant="tab" />
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel className="dashboardPanel" value={value} index={2}>
           <Dashboard />
         </TabPanel>
         <TabPanel value={value} index={3}>
