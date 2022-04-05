@@ -49,7 +49,7 @@ const rows = [
   createData("73452", "רונית לוי", "22", "12:23", "17:22", "פתוחה"),
   createData("73452", "רונית לוי", "22", "12:23", "17:22", "פתוחה"),
   createData("73452", "רונית לוי", "22", "12:23", "17:22", "פתוחה"),
-  createData("73452", "רונית לוי", "22", "12:23", "17:22", "פתוחה"),
+  createData("73452", "רונית לוי", "22", "12:23", "17:22", "סגור"),
 
 
 ];
@@ -57,7 +57,7 @@ const rows = [
 export default function DenseTable({variant}) {
   if (variant === "dashboard") {
     return (
-      <Paper sx={{ width: '100%' }}>
+      <Paper sx={{ width: 'auto' }}>
       <TableContainer sx={{ maxHeight: 440 }} >
         <Table stickyHeader={true} aria-label="sticky table">
           <TableHead stickyHeader={true} >

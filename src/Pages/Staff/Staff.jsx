@@ -26,7 +26,7 @@ const rowsData = [
 
 export default function DataTable({rows}) {
   return (
-    <div className="staffMain" style={{ height: "90vh", width: "100vw" }}>
+    <div className="staffMain" style={{ height: "100%", width: "100vw" }}>
    <WorkerLine rows={rowsData} />
     </div>
   );

@@ -77,20 +77,20 @@ export default function BasicTabs() {
         <TabPanel value={value} index={1}>
           <Table variant="tab" />
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel className="dashboardPanel" value={value} index={2}>
           <Dashboard />
         </TabPanel>
         <TabPanel value={value} index={3}>
           <Staff />
         </TabPanel>
-        <TabPanel value={value} index={4}>
-          <div className="ManagerCalenderMain">
+        <TabPanel style={{width: '100%'}} value={value} index={4}>
+          <div className="ManagerCalenderMain"> 
             <span className="futureTestsSpan">דף בדיקות עתידיות</span>
             <span>{NewDate}</span>
             <div className="ManegerCalenderTabs">
-              <ManegerCalenderTabs />
+          <ManegerCalenderTabs /> 
             </div>
-          </div>
+        </div>
         </TabPanel>
       </Box>
       <Box
@@ -106,6 +106,8 @@ export default function BasicTabs() {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          // variant="fullWidth"
+
         >
           <Tab icon={<FactCheckOutlinedIcon />} {...a11yProps(2)} />
 

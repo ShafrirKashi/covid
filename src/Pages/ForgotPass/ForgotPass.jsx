@@ -52,7 +52,6 @@ function Login() {
                   label="תעודת זהות"
                   name="ID"
                   autoComplete="ID"
-                  autoFocus
                 />
                 <Input
                   margin="normal"

@@ -31,7 +31,7 @@ function Manager() {
   let todayday = getDayName(today, "il-IL").split(" ");
 
   return (
-    <div className="ManagerMain">
+    <div className="ManagerMainWrapper">
       <div className="MaganerTop">
         <div className="ManagerSwitch">
           <p>סטטוס תחנה:</p>

@@ -14,7 +14,7 @@ function WorkerLine({ rows }) {
         </div>
         <div className="WorkerPageHeader">
           <span className="WorkerName">שם עובד</span>
-          <span className="WorkerPos">מס' עמדה</span>
+          <span className="WorkerPos">עמדה</span>
           <span className="WorkerOccupation">תפקיד</span>
           <span className="WorkerNum">מספר עובד</span>
           <span className="approveSwitch">גישה</span>

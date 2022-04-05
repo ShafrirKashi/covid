@@ -70,7 +70,6 @@ function Login({ handleClick }) {
                   label="תעודת זהות"
                   name="ID"
                   autoComplete="ID"
-                  autoFocus
                 />
                 <Input
                   onChange={(e) => setPhonevalue(e.target.value)}
