@@ -123,11 +123,11 @@
   box-shadow: 0px 0px 10px 2px rgba(146, 146, 146, 0.25);
 }
 .css-imwlvt {
-  height: 100% !important;
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ManagerBottom {
   width: 100%;
