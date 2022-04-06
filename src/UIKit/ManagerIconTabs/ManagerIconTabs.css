@@ -53,12 +53,12 @@
     min-width: 70px !important;
 }
 .dashboardPanel{
-    /* height: 100%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
 }
 .css-ahj2mt-MuiTypography-root{
     justify-content: center;

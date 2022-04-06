@@ -1,5 +1,8 @@
+.css-ahj2mt-MuiTypography-root{
+  height: 100% !important;
+}
 .ManagerMainWrapper {
-  height: 93%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,7 +10,7 @@
   align-items: center;
 }
 .MaganerTop {
-  height: 100%;
+  height: 15%;
   width: 100%;
   display: flex;
   justify-content: center;
