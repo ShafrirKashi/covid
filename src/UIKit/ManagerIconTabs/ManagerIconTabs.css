@@ -1,6 +1,7 @@
 .css-12m4v16 {
     background-color: rgb(230, 238, 243);
     z-index: 999999;
+    width: 100% !important;
 }
 .css-1ujnqem-MuiTabs-root{
     background-color: rgb(230, 238, 243);
