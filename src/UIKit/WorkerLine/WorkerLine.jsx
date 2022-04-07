@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WorkerLine.css";
 import Switch from "../Switch/Switch";
-import Modal from "../PopModal/PopModal";
 
 function WorkerLine({ rows }) {
   if (rows.length === 0) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Switch from "../../UIKit/Switch/Switch";
 import CircularProgress from "../../UIKit/CircularProgress/CircularProgress";
 import Table from "../../UIKit/Table/Table";
@@ -15,7 +15,7 @@ function Manager() {
     }
   };
 
-  let TheDay = new Date().getDay() + 1;
+  // let TheDay = new Date().getDay() + 1;
   let Dates = `${new Date().getDate()}.${
     new Date().getMonth() + 1
   }.${new Date().getFullYear()}`;

@@ -6,7 +6,6 @@ import RemoveTestLine from "../RemoveTestLine/RemoveTestLine";
 import AddChild from "../AddChild/AddChild";
 import { Modal } from "react-responsive-modal";
 import OTP from '../../UIKit/OTP/OTP'
-import FloatingButton from "../../UIKit/FloatingButton/FloatingButton";
 
 function ModalPop({ variant, open, details,stateChange, ...props }) {
   if (variant === "testline") {

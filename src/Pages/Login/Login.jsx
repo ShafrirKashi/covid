@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import Input from "../../UIKit/Input/Input";
@@ -6,6 +6,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
+import axios from 'axios'
 import Box from "@mui/material/Box";
 import PopModal from "../../UIKit/PopModal/PopModal";
 import Typography from "@mui/material/Typography";
@@ -17,25 +18,36 @@ import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 const theme = createTheme();
 
 function Login() {
+  const [id, setID] = useState("");
+  const [phone, setPhone] = useState("");
+  // const [idError, setIdError] = useState(false)
+  // const [phoneError, setPhoneError] = useState(false)
+  const [OTP, setOTP] = useState("");
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => setOpen(true);
 
-// const [id, setID] = useState("")
-// const [phone, setPhone] = useState("")
-// const [idError, setIdError] = useState(false)
-// const [phoneError, setPhoneError] = useState(false)
-const [OTP, setOTP] = useState("")
+  
+  const post = () => {
+    axios.post('http://localhost:4000/register', {
+      IsraeliID: id,
+      phone: phone,
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 
-const [open, setOpen] = useState(false);
-const onOpenModal = () => setOpen(true);
 
 
-  const href = (e) =>{
+  const href = (e) => {
     e.preventDefault();
-    if(OTP === 1111){
-      return (
-        "/main"
-      )
-    }}
-
+    if (OTP === 1111) {
+      return "/main";
+    }
+  };
 
   return (
     <div className="login">
@@ -56,7 +68,7 @@ const onOpenModal = () => setOpen(true);
               <Typography component="h1" variant="h5">
                 כניסה
               </Typography>
-            
+
               <Box
                 component="form"
                 noValidate
@@ -67,65 +79,68 @@ const onOpenModal = () => setOpen(true);
                   alignItems: "flex-start",
                 }}
               >
-                  {/* <form noValidate autoComplete="off" > */}
-                <Input
-                  // onChange={(e) => setID(e.target.value)}
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="ID"
-                  label="תעודת זהות"
-                  name="ID"
-                  autoComplete="ID"
-                />
-                <Input
-                // onChange={(e) => setPhone(e.target.value)}
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="טלפון"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-
-                />
-                
-                <Grid item xs>
-                  <Box sx={{mr: 1}}>
-                    <Link href="/forgot" variant="body2">
-                      שכחתי סיסמה
-                    </Link>
-                  </Box>
-                </Grid>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    direction: "column",
-                    width: "100%",
-                    marginTop: 3,
-                    mr: -2,
-                  }}
-                >
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="הישאר מחובר"
+                <form noValidate autoComplete="off">
+                  <Input
+                    onChange={(e) => setID(e.target.value)}
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="ID"
+                    label="תעודת זהות"
+                    name="ID"
+                    autoComplete="ID"
                   />
-                </Box>
-                <Button
-                  href={href}
-                  // type="submit"
-                  onClick={onOpenModal}
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2 }}
-                >
-                  התחבר
-                </Button>
-                <PopModal stateChange={setOTP} variant="OTPModal" open={open} closeIt={(open) => setOpen(false)} />
+                  <Input
+                    onChange={(e) => setPhone(e.target.value)}
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="text"
+                    label="טלפון"
+                    type="text"
+                    id="text"
+                    autoComplete="current-password"
+                  />
 
-                {/* </form> */}
+                  <Grid item xs>
+                    <Box sx={{ mr: 1 }}>
+                      <Link href="/forgot" variant="body2">
+                        שכחתי סיסמה
+                      </Link>
+                    </Box>
+                  </Grid>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+                      direction: "column",
+                      width: "100%",
+                      marginTop: 3,
+                      mr: -2,
+                    }}
+                  >
+                    <FormControlLabel
+                      control={<Checkbox />}
+                      label="הישאר מחובר"
+                    />
+                  </Box>
+                  <Button
+                    href={href}
+                    // type="submit"
+                    onClick={post}
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2 }}
+                  >
+                    התחבר
+                  </Button>
+                  <PopModal
+                    stateChange={setOTP}
+                    variant="OTPModal"
+                    open={open}
+                    closeIt={(open) => setOpen(false)}
+                  />
+                </form>
               </Box>
               <Link padding="20px" href="/registration" variant="body2">
                 {"לא רשום עדין? הרשם עכשיו"}
