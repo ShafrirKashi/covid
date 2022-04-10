@@ -10,6 +10,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Reg.css";
 import BidukLogo from "../../Assets/img/bidukLogoBlack.png";
 import Datepicker from "../../UIKit/Datepicker/Datepicker";
+import axios from 'axios'
 
 const theme = createTheme();
 
@@ -19,15 +20,24 @@ function Login({ handleClick }) {
   const [HMOvalue, setHMOvalue] = useState("");
   const [Datevalue, setDatevalue] = useState("");
 
-  console.log(IDvalue, Phonevalue, HMOvalue, Datevalue);
+
+  const post = () => {
+    axios.put('http://localhost:4000/register', {
+      IsraeliID: "034526780",
+      phone: "+972526945286",
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
   };
 
   return (
@@ -85,6 +95,7 @@ function Login({ handleClick }) {
                 <Select label="קופת חולים" variant={"HMO"} onChange={(e) => setHMOvalue(e.target.value)} />
                 <Button
                   type="submit"
+                  onClick={post}
                   fullWidth
                   variant="contained"
                   sx={{ mt: 6, mb: 2 }}
