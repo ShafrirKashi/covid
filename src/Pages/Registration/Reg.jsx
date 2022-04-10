@@ -22,9 +22,9 @@ function Login({ handleClick }) {
 
 
   const post = () => {
-    axios.put('http://localhost:4000/register', {
-      IsraeliID: "034526780",
-      phone: "+972526945286",
+    axios.put('http://ec2-54-78-217-16.eu-west-1.compute.amazonaws.com:4000/register', {
+      IsraeliID: IDvalue,
+      phone: Phonevalue,
     })
     .then(function (response) {
       console.log(response);

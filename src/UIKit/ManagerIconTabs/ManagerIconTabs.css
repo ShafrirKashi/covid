@@ -5,9 +5,10 @@
 }
 .css-1ujnqem-MuiTabs-root{
     background-color: rgb(230, 238, 243);
+    width: 100% !important;
 }
 .css-jpln7h-MuiTabs-scroller{
-    width: 100vw !important;
+    width: 100% !important;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -47,14 +48,6 @@
 }
 .css-1t4lqmc-MuiButtonBase-root-MuiTab-root{
     min-width: 70px !important;
-}
-.dashboardPanel{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
 .css-ahj2mt-MuiTypography-root{
     justify-content: center;
