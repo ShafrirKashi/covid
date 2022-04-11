@@ -5,3 +5,33 @@
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
     background-color: rgb(178, 204, 235) !important;
 }
+table {
+    font-family: Rubik;
+    border-collapse: collapse;
+    width: 100%;
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow: ellipsis;
+    max-width: auto;  
+    text-align: center;
+}
+  
+  table td, table th {
+    padding-bottom: 1rem;
+    white-space: nowrap;
+    overflow:hidden; 
+    text-overflow: ellipsis;
+    max-width: 30px;  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  
+  table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: rcenter;
+    background-color: #396ea0;
+    color: white;
+    max-width: 30px;
+
+  }
